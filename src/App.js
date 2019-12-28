@@ -6,6 +6,7 @@ import Contactus  from './component/Contactus';
 import Signin   from './component/Sign';
 import Login   from './component/Login';
 
+
 import { BrowserRouter, Route,Switch}from "react-router-dom"
 import Nav from './component/nav';
 
@@ -14,9 +15,10 @@ class App extends Component{
   render(){
     return(
       <div>
+
     <BrowserRouter>
     <div>
-      <Nav></Nav>
+     <Nav></Nav>
     <Switch>
     <Route path="/" component={Home} exact></Route>
     <Route path="/about"component={About}></Route>

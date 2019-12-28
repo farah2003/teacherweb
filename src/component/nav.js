@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
 import { NavLink} from "react-router-dom";
-import './style/Home.css';
+import './style/header.css';
+import { AppBar,Button ,Toolbar } from '@material-ui/core';
 class Nav extends Component{
   render(){
     return(
       <div className="Nav">
-        <div className="leftNav">
+       
+        <AppBar className="header">
+        <Toolbar>
+
+      <Button color="inherit">
+      <NavLink to="/">Home</NavLink>
+      </Button>
+      <Button color="inherit">
+      <NavLink  to="/contact">Home</NavLink>
+      </Button>
+      <Button color="inherit">
+      <NavLink to="/about">About</NavLink>
+      </Button>
+      <Button color="inherit">
+      <NavLink to="/sign">Signup </NavLink>
+      </Button>
+      <Button color="inherit">
+      <NavLink to="/login">Log in</NavLink>
+      </Button>
+
+   </Toolbar>
+</AppBar>
            
-       <NavLink to="/">Home</NavLink>
-       <NavLink to="/about">About Us</NavLink>
-       <NavLink to="/contact">Contact Us</NavLink>
-        </div>
-      
-       <div className="rightNav">
-       <NavLink className="link" to="/">sign up</NavLink>
-       <NavLink  className="link" to="/about">log in</NavLink>
-      
-       </div>
+     
+
       </div>
     )
   }
