@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+
+
 import './App.css';
+import Nav from './component/Nav'
 import Home   from './component/Home';
-import About from './component/Aboutus';
+import Aboutus from './component/Aboutus';
 import Contactus  from './component/Contactus';
 import Signin   from './component/Sign';
 import Login   from './component/Login';
@@ -11,9 +14,11 @@ import { BrowserRouter, Route,Switch}from "react-router-dom"
 import Nav from './component/nav';
 
 
+
 class App extends Component{
   render(){
     return(
+      
       <div>
 
     <BrowserRouter>
@@ -30,8 +35,12 @@ class App extends Component{
     </Switch>
     </div>
     </BrowserRouter>
-   
+
       </div>
+
+
+      
+      
   
     )
   }

@@ -3,6 +3,7 @@ import { NavLink} from "react-router-dom";
 
 import './style/header.css';
 import { AppBar,Button ,Toolbar } from '@material-ui/core';
+
 class Nav extends Component{
   render(){
     return(
@@ -29,6 +30,7 @@ class Nav extends Component{
 
    </Toolbar>
 </AppBar>
+        
       </div>
     )
   }
