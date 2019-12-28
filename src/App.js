@@ -5,6 +5,7 @@ import About from './component/Aboutus';
 import Contactus  from './component/Contactus';
 import Signin   from './component/Sign';
 import Login   from './component/Login';
+import Fillin from './component/fillin'
 
 
 import { BrowserRouter, Route,Switch}from "react-router-dom"
@@ -25,6 +26,7 @@ class App extends Component{
     <Route path="/contact"component={Contactus}></Route>
     <Route path="/sign"component={Signin}></Route>
     <Route path="/login"component={Login}></Route>
+    <Route path="/fillin"component={Fillin}></Route>
 
 
     </Switch>

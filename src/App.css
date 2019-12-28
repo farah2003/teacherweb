@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+ 
+  display: flex;
+}
+.fillin{
+justify-content: center;
+
 }
 
 
