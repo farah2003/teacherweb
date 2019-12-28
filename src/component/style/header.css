@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+   
+    justify-content: space-between;
+
+      
+      
+    
+   
+  }
+  .rightNav{
+    margin-left: 100px;
+   
+    display: inline-block;
+    flex:right
+  }
+  .link{
+    align-items: center;
+    border: 1px solid #ffdc2e;
+    border-radius: 16px;
+  }
+  .LeftNav{
+    align-items: flex-end;
+    flex:left
+  }
+  
+  
