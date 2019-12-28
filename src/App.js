@@ -12,10 +12,8 @@ import Login   from './component/Login';
 import Fillin from './component/fillin'
 
 
-
-
-
 class App extends Component{
+
   render(){
     return(
       
