@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink} from "react-router-dom";
-import './style/Nav.css';
+import './style/Home.css';
 class Nav extends Component{
   render(){
     return(
@@ -13,8 +13,8 @@ class Nav extends Component{
         </div>
       
        <div className="rightNav">
-       <NavLink className="link" to="/Sign">sign up</NavLink>
-       <NavLink  className="link" to="/Login">log in</NavLink>
+       <NavLink className="link" to="/">sign up</NavLink>
+       <NavLink  className="link" to="/about">log in</NavLink>
       
        </div>
       </div>
