@@ -1,0 +1,11 @@
+.Container{
+    flex: content;
+    align-items: center;
+}
+
+.Button{
+    margin-bottom: 100px;
+}
+.submitbutton{
+    padding: 100px;
+}
