@@ -3,13 +3,16 @@ import { BrowserRouter, Route,Switch}from "react-router-dom"
 
 
 import './App.css';
-import Nav from './component/nav'
+
 import Home   from './component/Home';
+import Main   from './component/index';
 import Aboutus from './component/Aboutus';
 import Contactus  from './component/Contactus';
 import Signin   from './component/Sign';
 import Login   from './component/Login';
-import Fillin from './component/fillin'
+import Fillin from './component/fillin';
+import Mainfordent  from './component/ForDentist/main'
+
 import { Button } from '@material-ui/core';
 
 
@@ -25,7 +28,7 @@ class App extends Component{
 
     <BrowserRouter>
     <div>
-     <Nav></Nav>
+     <Main></Main>
     <Switch>
     <Route path="/" component={Home} exact></Route>
     <Route path="/about"component={Aboutus}></Route>
@@ -33,6 +36,7 @@ class App extends Component{
     <Route path="/sign"component={Signin}></Route>
     <Route path="/login"component={Login}></Route>
     <Route path="/fillin"component={Fillin}></Route>
+    <Route path="/ForDentist/main"component={Mainfordent }></Route>
 
 
     </Switch>

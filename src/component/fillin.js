@@ -4,12 +4,14 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
+import SNav from './secandNav'
 
 
 class Fillin extends Component{
   render(){
     return(
       <div>
+          <SNav></SNav>
       <div>
       <h1> استمارة المريض  </h1>
 
