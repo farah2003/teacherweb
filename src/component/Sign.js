@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import PasswordField from 'material-ui-password-field'
+
 
 import './style/sign.css'
 
@@ -21,7 +23,12 @@ class Signin extends Component{
           <TextField id="filled-basic" label="Your User Name" variant="filled" />
 
           <h3> Password </h3>
-          <TextField id="filled-basic" label="Your Password" variant="filled" />
+          <PasswordField
+             hintText="At least 8 characters"
+            floatingLabelText="Enter your password"
+           errorText="Your password is too short"
+        />
+
           <h3> Your Phone Number</h3>
           <TextField id="filled-basic" label="Enter your Phone Number" variant="filled" />
 
