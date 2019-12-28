@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import PasswordField from 'material-ui-password-field'
+
 
 
 class Login extends Component{
@@ -16,8 +18,11 @@ class Login extends Component{
 <TextField id="filled-basic" label="Enter Your User Name" variant="filled" />
 
 <h3>  Password </h3>
-<TextField id="filled-basic" label="Enter Your Password" variant="filled" />
-
+<PasswordField
+             hintText="At least 8 characters"
+            floatingLabelText="Enter your password"
+           errorText="Your password is too short"
+        />
 
         </div>
         <div>
