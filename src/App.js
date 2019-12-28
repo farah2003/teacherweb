@@ -5,21 +5,29 @@ import About from './component/Aboutus';
 import Contactus  from './component/Contactus';
 import Signin   from './component/Sign';
 import Login   from './component/Login';
-import Test from './component/test';
+
+import { BrowserRouter, Route,Switch}from "react-router-dom"
+import Nav from './component/nav';
 
 
 class App extends Component{
   render(){
     return(
       <div>
-        <h1>webbbbbbbbbbbbbbb</h1>>
-        <Home></Home>
-        <About></About>
-        <Contactus></Contactus>
-        <Test></Test>
+    <BrowserRouter>
+    <div>
+      <Nav></Nav>
+    <Switch>
+    <Route path="/" component={Home} exact></Route>
+    <Route path="/about"component={About}></Route>
+    <Route path="/contact"component={Contactus}></Route>
+    <Route path="/sign"component={Signin}></Route>
+    <Route path="/login"component={Login}></Route>
 
-       <Login></Login>
-       <Signin></Signin>
+
+    </Switch>
+    </div>
+    </BrowserRouter>
    
       </div>
   
