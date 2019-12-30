@@ -11,7 +11,16 @@ class Profile extends Component{
       
       <div>
        
-    <h1>fghg fdg dfgadfgfd</h1>
+ 
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       <h1>Profile</h1>
+       
 
 
       </div>

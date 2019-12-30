@@ -13,7 +13,8 @@ import Login   from './component/Login';
 import Fillin from './component/fillin';
 import Mainfordent  from './component/ForDentist/main'
 import Profile from './component/ForDentist/profileDent'
-import FTab from './component/ForDentist/pageTabs/page1'
+import FiratTab from './component/ForDentist/page1'
+import SecandPage from './component/ForDentist/page2'
 
 import { Button } from '@material-ui/core';
 
@@ -39,9 +40,9 @@ class App extends Component{
     <Route path="/login"component={Login}></Route>
     <Route path="/fillin"component={Fillin}></Route>
     <Route path="/ForDentist/main"component={Mainfordent }></Route>
-    <Route path='/ForDentist/profileDent' Component={Profile}></Route>
- 
-    <Route path='/ForDentist/pageTabs/page1' Component={FTab}></Route>
+    <Route path='/ForDentist/page2' component={SecandPage}></Route>
+    <Route path='/ForDentist/profileDent' component={Profile}></Route>
+    <Route path='/ForDentist/page1' component={FiratTab}></Route>
 
 
 

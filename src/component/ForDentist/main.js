@@ -5,17 +5,17 @@ import { Button } from '@material-ui/core';
 import DNav from './navForDent'
 import './stylefordent/main.css'
 import { AppBar ,Toolbar, Typography,Tabs,Tab,IconButton,InputBase} from '@material-ui/core';
-import './pageTabs/page1'
-
+import './page1'
+import './page2'
 class Mainfordent extends Component{
  state={
    list:[]
  }
  move1=()=>{
-  this.props.history.push('./pageTabs/page1')
+  this.props.history.push('./page1')
  }
  move2=()=>{
-  this.props.history.push('./pageTabs/page1')
+  this.props.history.push('./page2')
 
 }
 
@@ -65,31 +65,10 @@ class Mainfordent extends Component{
           </Tabs>
         </AppBar>
         <div>
-            <p>fgjkhslgfh;hgfhgjestkljerbyerh e
-                vkn df
-                fh fjhgkf 
-                g dghjf 
-                f rthjherlgkjhegjhkdgj herjwelfjdnfdngdfnmg,sdgreulhlg nm</p>
-                <p>fgjkhslgfh;hgfhgjestkljerbyerh e
-                vkn df
-                fh fjhgkf 
-                g dghjf 
-                f rthjherlgkjhegjhkdgj herjwelfjdnfdngdfnmg,sdgreulhlg nm</p>
-                <p>fgjkhslgfh;hgfhgjestkljerbyerh e
-                vkn df
-                fh fjhgkf 
-                g dghjf 
-                f rthjherlgkjhegjhkdgj herjwelfjdnfdngdfnmg,sdgreulhlg nm</p>
-                <p>fgjkhslgfh;hgfhgjestkljerbyerh e
-                vkn df
-                fh fjhgkf 
-                g dghjf 
-                f rthjherlgkjhegjhkdgj herjwelfjdnfdngdfnmg,sdgreulhlg nm</p>
-                <p>fgjkhslgfh;hgfhgjestkljerbyerh e
-                vkn df
-                fh fjhgkf 
-                g dghjf 
-                f rthjherlgkjhegjhkdgj herjwelfjdnfdngdfnmg,sdgreulhlg nm</p>
+        <p> f mfhgn,gn hsfnmbmfghnfh</p>
+        <p> f mfhgn,gn hsfnmbmfghnfh</p>
+        <p> f mfhgn,gn hsfnmbmfghnfh</p>
+        <p> f mfhgn,gn hsfnmbmfghnfh</p>
         </div>
          
         </div>

@@ -12,13 +12,13 @@ import './profileDent'
 
   
 class DNav extends Component{
-    
+  move=()=>{
+    this.props.history.push('./profileDent')
+   }
+   
 
-    move=(e)=>{
-    //  console.log('fdgjfng')
-    // this.props.history.push('./profileDent')
-    }
-    change=()=>{
+ 
+  change=()=>{
       console.log('dfgjfg')
     }
   render(){
@@ -27,6 +27,7 @@ class DNav extends Component{
 
     return(
       <div className="Nav">
+       
           <div>
        
         <AppBar className="header">
@@ -69,7 +70,11 @@ class DNav extends Component{
    </Toolbar>
 
 </AppBar></div>
-
+<button onClick={this.move}>fhjhvkmbm bfvgh</button>
+<button onClick={this.move}>fhjhvkmbm bfvgh</button>
+<button onClick={this.move}>fhjhvkmbm bfvgh</button>
+<button onClick={this.move}>fhjhvkmbm bfvgh</button>
+<button onClick={this.move}>fhjhvkmbm bfvgh</button>
         
       </div>
     )
