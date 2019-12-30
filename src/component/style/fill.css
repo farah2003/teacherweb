@@ -1,0 +1,43 @@
+.div{
+  background-color: #48c8df;
+}
+.header {
+  
+
+   border-bottom:  1px solid #466995;
+    
+    position: fixed;
+    width: 100%;
+     z-index: 10;
+}  
+
+.body{
+    background-color: #DBE9EE;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 30px;
+
+    
+    text-align: right;
+    padding-right:  50px;
+    font-family: sans-serif;
+  
+}
+.submitbutton{
+    border-radius: 15px;
+    width: 200px;
+}
+.button{
+    padding-top: 30px;
+}
+.h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+.h3{
+font-size: 15px;
+font-weight: 100;
+}
