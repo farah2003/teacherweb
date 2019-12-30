@@ -12,6 +12,8 @@ import Signin   from './component/Sign';
 import Login   from './component/Login';
 import Fillin from './component/fillin';
 import Mainfordent  from './component/ForDentist/main'
+import Profile from './component/ForDentist/profileDent'
+import FTab from './component/ForDentist/pageTabs/page1'
 
 import { Button } from '@material-ui/core';
 
@@ -37,12 +39,17 @@ class App extends Component{
     <Route path="/login"component={Login}></Route>
     <Route path="/fillin"component={Fillin}></Route>
     <Route path="/ForDentist/main"component={Mainfordent }></Route>
+    <Route path='/ForDentist/profileDent' Component={Profile}></Route>
+ 
+    <Route path='/ForDentist/pageTabs/page1' Component={FTab}></Route>
+
 
 
     </Switch>
     </div>
     </BrowserRouter>
 
+    
       </div>
 
 

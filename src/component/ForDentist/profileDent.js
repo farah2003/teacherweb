@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Nav from './nav'
 
 
 
-class Main extends Component{
+
+class Profile extends Component{
 
 
   render(){
@@ -11,8 +11,7 @@ class Main extends Component{
       
       <div>
        
-    <Nav></Nav>
-
+    <h1>fghg fdg dfgadfgfd</h1>
 
 
       </div>
@@ -25,4 +24,4 @@ class Main extends Component{
   }
 }
 
-export default Main;
+export default Profile;
