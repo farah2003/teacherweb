@@ -8,7 +8,7 @@ import Home   from './component/Home';
 import Main   from './component/index';
 import Aboutus from './component/Aboutus';
 import Contactus  from './component/Contactus';
-import Signin   from './component/Sign';
+import Signin   from './component/sign';
 import Login   from './component/Login';
 import Fillin from './component/fillin';
 import Mainfordent  from './component/ForDentist/main'

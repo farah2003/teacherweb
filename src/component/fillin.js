@@ -8,6 +8,7 @@ import SNav from './secandNav'
 
 
 import * as firebase from 'firebase'
+import { throwStatement } from '@babel/types';
 
 class Fillin extends Component{
   state={
@@ -16,7 +17,10 @@ class Fillin extends Component{
     age:'',
     email:'',
     notes:'',
-    disease:''
+    disease:'',
+    defaultChecked:'',
+    id:''
+
   }
     
   addName=(e)=>{
@@ -87,6 +91,16 @@ db.collection("patients").add({
    
   
   }
+  check=(e)=>{
+  console.log(e.target.checked)
+  e.target.checked?
+  console.log('ttttt'):
+  console.log('ffff')
+  
+   
+   
+  
+  }
  
   render(){
     return(
@@ -120,18 +134,36 @@ db.collection("patients").add({
               
 
               <h3  className="h3"> العلاج التي تحتاجه  </h3>
-
+              <div>
               <FormControlLabel
                label="تسوس اسنان"
              control={
           <Checkbox
        value="checkedI"
         color="primary"
+        defaultChecked={''}
+        onChange={this.check}
 
       />
         }
        
       />
+      </div>
+<div>
+<FormControlLabel
+               label="خلع"
+             control={
+          <Checkbox
+       value="checkedI"
+        color="primary"
+        defaultChecked={''}
+        onChange={this.check}
+
+      />
+        }
+       
+      />
+      </div>
               
               
               </div>

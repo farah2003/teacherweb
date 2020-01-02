@@ -65,7 +65,8 @@ class Signin extends Component{
     firebase.auth().createUserWithEmailAndPassword(email,
      password).catch(function (error) {
         // Handle Errors here.
- 
+        var error = error.code;
+        var errorMessage = error.message;
         // ...
     }).then(function(){
     db.collection("Users").add({
