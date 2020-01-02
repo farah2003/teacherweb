@@ -32,6 +32,11 @@
 }
 .button{
     padding-top: 30px;
+    text-align: right;
+    padding:30px;
+    background-color: #DBE9EE;
+    flex-flow: row wrap;
+	
 }
 .h1{
     font-size: 25px;

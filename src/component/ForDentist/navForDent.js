@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { NavLink} from "react-router-dom";
 
 
-import { AppBar,Button ,Toolbar, Typography,Tabs,Tab,IconButton,InputBase} from '@material-ui/core';
+
+import { AppBar,Toolbar, Typography,IconButton,InputBase} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import {makeStyles,fade}  from '@material-ui/core/styles';
+
 import './stylefordent/navfar.css'
 import PersonIcon from '@material-ui/icons/Person';
 import './profileDent'
@@ -29,8 +29,8 @@ class DNav extends Component{
       <div className="Nav">
        
           <div>
-       
-        <AppBar className="header">
+          48c8df
+        <AppBar className="header"  style={{ background: '#2E3B55'}}>
         <Toolbar>
             
 

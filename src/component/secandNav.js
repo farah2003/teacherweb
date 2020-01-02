@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { NavLink} from "react-router-dom";
+
 
 import './style/header.css';
-import { AppBar,Button ,Toolbar, Typography} from '@material-ui/core';
+import { AppBar ,Toolbar, Typography} from '@material-ui/core';
 
 class SNav extends Component{
   render(){
     return(
       <div className="Nav">
        
-        <AppBar className="header">
+        <AppBar className="header" color="default" position='fixed'>
         <Toolbar>
 
         <Typography  >

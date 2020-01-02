@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+
+import {Button,Input} from '@material-ui/core';
+
 import PasswordField from 'material-ui-password-field'
 import './ForDentist/main'
 
@@ -20,7 +20,7 @@ class Signin extends Component{
   addEmail=(e)=>{
 
     this.setState({
-      name:e.target.value
+      email:e.target.value
     })
   }
   addName=(e)=>{
@@ -46,7 +46,7 @@ class Signin extends Component{
   }
   addPassword=(e)=>{
     this.setState({
-      PhoneNum:e.target.value
+      password:e.target.value
     })
     
 
@@ -65,8 +65,7 @@ class Signin extends Component{
     firebase.auth().createUserWithEmailAndPassword(email,
      password).catch(function (error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+ 
         // ...
     }).then(function(){
     db.collection("Users").add({
@@ -111,12 +110,12 @@ class Signin extends Component{
 
 
           <h3>  Full name  </h3>
-          <TextField id="filled-basic" label="Your Full name" variant="filled"  onChange={this.addName}/>
+          <Input  id="filled-basic" label="Your Full name" variant="filled"  onChange={this.addName}/>
 
           <h3>  User Name </h3>
-          <TextField id="filled-basic" label="Your User Name" variant="filled"  onChange={this.addFullName}/>
+          <Input  id="filled-basic" label="Your User Name" variant="filled"  onChange={this.addFullName}/>
           <h3> Your Email</h3>
-          <TextField id="filled-basic" label="Enter your Email" variant="filled" onChange={this.addEmail} />
+          <Input  id="filled-basic" label="Enter your Email" variant="filled" onChange={this.addEmail} />
 
           <h3> Password </h3>
           <PasswordField
@@ -127,7 +126,7 @@ class Signin extends Component{
         />
 
           <h3> Your Phone Number</h3>
-          <TextField id="filled-basic" label="Enter your Phone Number" variant="filled" onChange={this.addNumber} />
+          <Input id="filled-basic" label="Enter your Phone Number" variant="filled" onChange={this.addNumber} />
 
 
         </div>

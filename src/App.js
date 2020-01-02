@@ -16,7 +16,6 @@ import Profile from './component/ForDentist/profileDent'
 import FiratTab from './component/ForDentist/page1'
 import SecandPage from './component/ForDentist/page2'
 
-import { Button } from '@material-ui/core';
 
 
 
