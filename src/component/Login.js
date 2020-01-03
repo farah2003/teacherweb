@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
-import {Button,Input} from '@material-ui/core';
 
-import PasswordField from 'material-ui-password-field'
 
 import * as firebase from 'firebase'
 import './sign'
@@ -52,31 +51,46 @@ class Login extends Component{
   render(){
     return(
       <div>
-        <div>
-        <h1> Login </h1>
-
-
-<h3>  User Name  </h3>
-<Input id="filled-basic" label="Enter Your User Name" variant="filled" onChange={this.addEmail} />
-
-<h3>  Password </h3>
-<PasswordField
-             hintText="At least 8 characters"
-            floatingLabelText="Enter your password"
-           errorText="Your password is too short"
-           onChange={this.addPassword}
-        />
-
-        </div>
-        <div>
-        <Button variant="contained" color="primary"className="submitbutton" onClick={this.login}>Log in</Button> </div>
-        <h6>Don't have a acount</h6>
-        <Button variant="contained" color="primary"className="submitbutton" onClick={this.signup}>sign up </Button>
-
-
+         <Form className="login-form">
+        <Form.Item>
+          {getFieldDecorator('username', {
+            rules: [{ required: true, message: 'Please input your username!' }],
+          })(
+            <Input
+              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              placeholder="Username"
+              onChange={this.addEmail}
+            />,
+          )}
+        </Form.Item>
+        <Form.Item>
+          {getFieldDecorator('password', {
+            rules: [{ required: true, message: 'Please input your Password!' }],
+          })(
+            <Input
+            onChange={this.addPassword}
+              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              type="password"
+              placeholder="Password"
+            />,
+          )}
+        </Form.Item>
+        <Form.Item>
+          {getFieldDecorator('remember', {
+            valuePropName: 'checked',
+            initialValue: true,
+          })(<Checkbox>Remember me</Checkbox>)}
+          <a className="login-form-forgot" href="">
+            Forgot password
+          </a>
+          <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.login}>
+            Log in
+          </Button>
+          Or <a href='./sign'> don't have a acount sign up </a>
+        </Form.Item>
+      </Form>
       </div>
-
-
+     
     )
   }
   
