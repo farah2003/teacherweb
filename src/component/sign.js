@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-import {Button,Input} from '@material-ui/core';
+import {Button,Input,Grid , Paper,} from '@material-ui/core';
 
 import PasswordField from 'material-ui-password-field'
 import './ForDentist/main'

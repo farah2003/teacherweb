@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-
-
-
-  import  Mainfordent from './main'
-
+import DNav from './navForDent'
+ 
+import Mainfordent from './main'
 class  FiratTab extends Component{
     render(){
         return(
             <div>
-             <Mainfordent></Mainfordent>
+           
              
              
-
-        
-
-            </div>
+<Mainfordent  {...this.props}></Mainfordent>
+<h1> page 1</h1>
+            </div> 
         )
     }
 }

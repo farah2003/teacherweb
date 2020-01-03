@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Grid , Paper,FormControlLabel,Checkbox,Typography } from '@material-ui/core';
 import * as firebase from 'firebase'
 import './stylefordent/allpage.css'
-
+import Mainfordent from './main'
 export default class PCard  extends  Component{
   state={
     name:'',
@@ -45,6 +45,7 @@ render(){
   const{name,age,phone}=this.state
   return (
     <div className="continer">
+      <Mainfordent  {...this.props}></Mainfordent>
     <div className="paper">
       
         <div   >

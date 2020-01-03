@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import { AppBar,Toolbar, Typography,IconButton,InputBase} from '@material-ui/core';
+import { AppBar,Toolbar, Typography,IconButton,InputBase,Button} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
 import './stylefordent/navfar.css'
@@ -11,7 +11,9 @@ import './profileDent'
 
   
 class DNav extends Component{
+  
   move=()=>{
+
     this.props.history.push('./profileDent')
    }
    
@@ -19,8 +21,7 @@ class DNav extends Component{
  
 
   render(){
-    
-
+    console.log(this.props)
 
     return(
       <div className="Nav">
