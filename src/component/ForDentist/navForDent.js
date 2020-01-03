@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
+import { Menu,Layout,Icon} from 'antd';
 
-import { AppBar,Toolbar, Typography,IconButton,InputBase,Button} from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
 
 import './stylefordent/navfar.css'
-import PersonIcon from '@material-ui/icons/Person';
+
 import './profileDent'
+const { Header } = Layout;
 
 
   
@@ -26,48 +26,31 @@ class DNav extends Component{
     return(
       <div className="Nav">
        
-          <div>
-   
-        <AppBar className="header"  style={{ background: '#2E3B55'}}>
-        <Toolbar>
-            
+       <div>
+  <Layout className="layout">
+    <Header>
+      
+      <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['2']}
+        style={{ lineHeight: '64px' }}
+      >
+        
+        <Menu.Item key="profile">
+        <Icon type="user" >
+        <a href="https://" target="_blank" rel="noopener noreferrer"/>
+        </Icon>
+        </Menu.Item>
 
+       
+      </Menu>
+    </Header>
+ 
+    </Layout>
 
-
-        <Typography  >
- welcome Farah Ismails
-</Typography>
-
-
-<div className="navRight">
-    
-<div className='search'>
-            <div className='searchIcon'>
-              <SearchIcon  />
-            </div>
-            <InputBase
-            className="Input"
-              placeholder="Search…"
-              
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-            </div>
-            <div className="personIcon">
-            <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={this.move}
-                color="inherit"
-              >
-         < PersonIcon >
-         </PersonIcon>
-        </IconButton>
     </div>
-   </Toolbar>
-
-</AppBar></div>
+     
 
         
       </div>

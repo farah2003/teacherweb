@@ -5,7 +5,7 @@ import PCard from './allpage'
 
 import DNav from './navForDent'
 import './stylefordent/main.css'
-import { AppBar,Tabs,Tab} from '@material-ui/core';
+;
 import './page1'
 import './page2'
 class Mainfordent extends Component{
@@ -42,7 +42,7 @@ class Mainfordent extends Component{
   render(){
     return(
       <scrollable>
-   
+   <DNav></DNav>
       </scrollable>
       
   

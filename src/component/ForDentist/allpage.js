@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Grid , Paper,FormControlLabel,Checkbox,Typography } from '@material-ui/core';
+
 import * as firebase from 'firebase'
 import './stylefordent/allpage.css'
 import Mainfordent from './main'
@@ -49,49 +49,7 @@ render(){
     <div className="paper">
       
         <div   >
-      <Paper className="grid" >
-      
-          <Grid >
-
-        
-       
-            <Grid>
-              <Grid >
-                <Typography >
-                 {name}الاسم:
-                </Typography>
-                <Typography >
-              العمر:{age}
-                </Typography>
-                <Typography >
-                  نوع :خلع
-                </Typography>
-              </Grid>
-              <Grid >
-                <Typography >
-                رقم الجوال:0599832484
-                </Typography>
-                <Typography >
-              الامراض :لا يوجد
-                </Typography>
-              </Grid>
-            </Grid>
-            <div>
-            <FormControlLabel
-               label="طلب"
-             control={
-          <Checkbox
-       value="checkedI"
-        color="primary"
-        defaultChecked={''}
-      />
-        }  
-      />
-      </div>
-         
-          </Grid>
-       
-      </Paper>
+  
     </div>
     <button onClick={this.print}>vbvbs</button>
 

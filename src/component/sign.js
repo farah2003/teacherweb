@@ -1,8 +1,6 @@
 import React, { Component } from 'react'; 
 
-import {Button,Input,Grid , Paper,} from '@material-ui/core';
-
-import PasswordField from 'material-ui-password-field'
+import { Input, Button } from 'antd';
 import './ForDentist/main'
 
 import * as firebase from 'firebase'
@@ -111,27 +109,30 @@ class Signin extends Component{
 
 
           <h3>  Full name  </h3>
-          <Input  id="filled-basic" label="Your Full name" variant="filled"  onChange={this.addName}/>
+          <Input placeholder="Basic usage" onChange={this.addName} />
+        
 
           <h3>  User Name </h3>
-          <Input  id="filled-basic" label="Your User Name" variant="filled"  onChange={this.addFullName}/>
+          <Input placeholder="Basic usage"onChange={this.addFullName} />
+         
           <h3> Your Email</h3>
-          <Input  id="filled-basic" label="Enter your Email" variant="filled" onChange={this.addEmail} />
+          <Input placeholder="Basic usage" onChange={this.addEmail} />
+      
 
           <h3> Password </h3>
-          <PasswordField
-             hintText="At least 8 characters"
-            floatingLabelText="Enter your password"
-           errorText="Your password is too short"
-           onChange={this.addPassword}
-        />
+          <Input.Password placeholder="input password" onChange={this.addPassword} />
+
 
           <h3> Your Phone Number</h3>
-          <Input id="filled-basic" label="Enter your Phone Number" variant="filled" onChange={this.addNumber} />
+          <Input placeholder="Basic usage" onChange={this.addNumber} />
+         
 
 
         </div>
-        <div> <Button variant="contained" color="primary"className="submitbutton" onClick={this.fire}>Submit</Button> </div>
+        <div>   <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.fire}>
+            Log in
+          </Button>
+ </div>
 
 
 

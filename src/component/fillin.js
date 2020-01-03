@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import { Input , Checkbox } from 'antd';
+import { Input , Checkbox,Button } from 'antd';
 import './style/fill.css'
 import SNav from './secandNav'
 
@@ -139,16 +139,7 @@ db.collection("patients").add({
 
               <h3  className="h3"> العلاج التي تحتاجه  </h3>
               <div>
-              <FormControlLabel
-               label="تسوس اسنان"
-             control={
-          <Checkbox
-       value="checkedI"
-        color="primary"
-        defaultChecked={''}
-        onChange={this.check}
-
-      />
+              
         }
        
       />

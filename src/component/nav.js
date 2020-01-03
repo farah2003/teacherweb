@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 import { NavLink} from "react-router-dom";
 import { Menu,Layout} from 'antd';
-const { Header } = Layout;
+
 
 
 import './style/header.css';
 
-
+const { Header } = Layout;
 class Nav extends Component{
 
 

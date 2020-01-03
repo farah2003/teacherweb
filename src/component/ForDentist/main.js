@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component ,Button} from 'react';
 
 
 import PCard from './allpage'
 
 import DNav from './navForDent'
 import './stylefordent/main.css'
-import { AppBar,Tabs,Tab} from '@material-ui/core';
+import { Tabs } from 'antd';
+
 import './page1'
 import './page2'
 import './allpage'
+
+const { TabPane } = Tabs;
 class Mainfordent extends Component{
 
 
@@ -37,33 +40,32 @@ move3=()=>{
 
     return(
       <scrollable>
-         
-      <div className="mainDiv">
+  
+      <div className="card-container">
+    <Tabs type="card">
      
+    <TabPane tab="Tab Title 1" key="1" >
+      <Button onClick={this.move1} >
+        <p>Content of Tab Pane 1</p>
+        </Button>
+      </TabPane>
+   
      
-      </div>
-      <div >
-        <AppBar position="static" color="default">
-
-          <Tabs
-           
-            onChange={this.change}
-            indicatorColor="primary"
-            textColor="primary"
-            variant="fullWidth"
-            aria-label="full width tabs example"
-          >
-               <Tab label="الكل"  onClick={this.move3}/>
-            <Tab label="خلع"  onClick={this.move1}  />
-            <Tab label="تسوس اسنان" onClick={this.move2} />
-            <Tab label="تراكيب"  />
-            <Tab label="Item four"  />
-            <Tab label="Item Five"/>
-          </Tabs>
-        </AppBar>
-     
-         
-        </div>
+      <TabPane tab="Tab Title 2" key="2" >
+      <Button  onClick={this.move2} >
+        <p>Content of Tab Pane 2</p>
+        </Button>
+      </TabPane>
+   
+      <TabPane tab="Tab Title 3" key="3" >
+      <Button onClick={this.move3}  >
+        <p>Content of Tab Pane 3</p>
+        </Button>
+      </TabPane>
+   
+    </Tabs>
+  </div>
+ 
 
   
 

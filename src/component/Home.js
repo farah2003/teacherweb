@@ -21,7 +21,7 @@ class  Home extends Component{
        
       </div>
       <div className="container1">
-      <Button type="primary">Button</Button>
+      <Button type="primary" onClick={this.move}>Button</Button>
       </div>
 
       
