@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import { Button ,Card} from 'antd';
+
 import './style/home.css'
 import './fillin'
-import * as firebase from 'firebase'
+const { Meta } = Card;
+
 
 class  Home extends Component{
 
@@ -19,8 +21,16 @@ class  Home extends Component{
        
       </div>
       <div className="container1">
-      <Button variant="contained" color="primary" className="fillin" onClick={this.move}>fill in</Button>
+      <Button type="primary">Button</Button>
       </div>
+      <Card
+    hoverable
+    style={{ width: 240 }}
+    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+  >
+    <Meta title="Europe Street beat" description="www.instagram.com" />
+  </Card>
+
       
         
       </div>
