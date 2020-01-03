@@ -1,14 +1,14 @@
 
 
 import React, { Component } from 'react';
-import {Button,Input,Checkbox,FormControlLabel} from '@material-ui/core';
-
+import { Input , Checkbox } from 'antd';
 import './style/fill.css'
 import SNav from './secandNav'
 
 
 import * as firebase from 'firebase'
-import { throwStatement } from '@babel/types';
+const { TextArea } = Input;
+
 
 class Fillin extends Component{
   state={
@@ -122,24 +122,20 @@ db.collection("patients").add({
 
              
               <h3 className="h3">  الإسم الكامل للمريض </h3>
-              <Input id="filled-basic" label="اسم المريض رباعي" variant="filled" onChange={this.addName} />
+              <Input placeholder="اسم المريض رباعي" onChange={this.addName} />
               <h3  className="h3">  رقم هاتف المريض </h3>
-              <Input id="filled-basic" label="رقم الهاتف" variant="filled"  onChange={this.addPhone}/>
-
+              <Input placeholder="رقم الهاتف" onChange={this.addPhone}/>
               <h3  className="h3">  العمر </h3>
-              <Input id="filled-basic" label="أمراض أخرى" variant="filled"  onChange={this.addAge}/>
+              <Input placeholder="العمر" onChange={this.addAge}/>
               <h3  className="h3"> Email addresss </h3>
-              <Input id="filled-basic" label="أمراض أخرى" variant="filled" onChange={this.addEmail} />
-
+              <Input placeholder=" الإيميل" onChange={this.addEmail}  />
              
 
               <h3  className="h3"> ملاحظات إضافية  </h3>
-              <Input id="filled-basic" label="" variant="filled"  onChange={this.addNotes}/>
-
-              <h3  className="h3">  أمراض مزمنة أو أمراض أخرى </h3>
-              <Input id="filled-basic" label="أمراض أخرى" variant="filled" onChange={this.addDisease} />
-
+              <TextArea rows={4} onChange={this.addNotes} />
               
+              <h3  className="h3">  أمراض مزمنة أو أمراض أخرى </h3>
+              <TextArea rows={4} onChange={this.addDisease} />
 
               <h3  className="h3"> العلاج التي تحتاجه  </h3>
               <div>
@@ -158,25 +154,18 @@ db.collection("patients").add({
       />
       </div>
 <div>
-<FormControlLabel
-               label="خلع"
-             control={
-          <Checkbox
-       value="checkedI"
-        color="primary"
-        defaultChecked={''}
-        onChange={this.check}
 
-      />
-        }
+<Checkbox onChange={this.check}>خلع</Checkbox>
+        
        
-      />
+      
       </div>
               
               
               </div>
                <div className="button">
-          <Button variant="contained" color="primary"className="submitbutton" onClick={this.send}> ارسال </Button>
+               <Button type="primary" onClick={this.send}>ارسال</Button>
+
           </div>
 
           

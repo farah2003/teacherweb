@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+
 import { NavLink} from "react-router-dom";
-import red from '@material-ui/core/colors/red';
+import { Menu,Layout} from 'antd';
+const { Header } = Layout;
+
 
 import './style/header.css';
-import { AppBar,Button ,Toolbar } from '@material-ui/core';
-const primary = red[500]; 
+
+
 class Nav extends Component{
 
 
@@ -12,31 +15,29 @@ class Nav extends Component{
   render(){
     return(
   
-      <div className="Nav">
-       
-        <AppBar color={primary}> 
-        <Toolbar>
-
-<Button color="inherit">
-<NavLink to="/">Home</NavLink>
-</Button>
-<Button color="inherit">
-<NavLink  to="/contact">ContactUs</NavLink>
-</Button>
-<Button color="inherit">
-<NavLink to="/about">About</NavLink>
-</Button>
-<Button color="inherit">
-<NavLink to="/sign">Signup </NavLink>
-</Button>
-<Button color="inherit">
-<NavLink to="/login">Log in</NavLink>
-</Button>
-
-   </Toolbar>
-</AppBar>
-        
-      </div>
+      <div>
+      <Layout className="layout">
+        <Header>
+          
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            defaultSelectedKeys={['2']}
+            style={{ lineHeight: '64px' }}
+          >
+            
+            <Menu.Item key="1"><NavLink to="/">Home</NavLink></Menu.Item>
+    
+            <Menu.Item key="2"><NavLink to="/contact">contact us</NavLink></Menu.Item>
+            <Menu.Item key="3"><NavLink to="/about">about us</NavLink></Menu.Item>
+            <Menu.Item key="4"><NavLink to="/sign">sign in </NavLink></Menu.Item>
+            <Menu.Item key="5"><NavLink to="/login">log in </NavLink></Menu.Item>
+          </Menu>
+        </Header>
+     
+        </Layout>
+    
+        </div>
     )
   }
 }

@@ -2,23 +2,28 @@ import React, { Component } from 'react';
 
 
 import './style/header.css';
-import { AppBar ,Toolbar, Typography} from '@material-ui/core';
+import { Menu,Layout} from 'antd';
+const { Header } = Layout;
 
 class SNav extends Component{
   render(){
     return(
       <div className="Nav">
-       
-        <AppBar className="header" color="default" position='fixed'>
-        <Toolbar>
-
-        <Typography  >
- welcome
-</Typography>
-
-   </Toolbar>
-</AppBar>
-        
+      <Layout className="layout">
+        <Header>
+          
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            defaultSelectedKeys={['2']}
+            style={{ lineHeight: '64px' }}
+          >
+            
+            <h3>welcome</h3>
+          </Menu>
+        </Header>
+     
+        </Layout>
       </div>
     )
   }
