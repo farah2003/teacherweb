@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 import { AppBar,Toolbar, Typography,IconButton,InputBase} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
@@ -18,9 +17,7 @@ class DNav extends Component{
    
 
  
-  change=()=>{
-      console.log('dfgjfg')
-    }
+
   render(){
     
 
@@ -29,7 +26,7 @@ class DNav extends Component{
       <div className="Nav">
        
           <div>
-          48c8df
+   
         <AppBar className="header"  style={{ background: '#2E3B55'}}>
         <Toolbar>
             
@@ -70,11 +67,7 @@ class DNav extends Component{
    </Toolbar>
 
 </AppBar></div>
-<button onClick={this.move}>fhjhvkmbm bfvgh</button>
-<button onClick={this.move}>fhjhvkmbm bfvgh</button>
-<button onClick={this.move}>fhjhvkmbm bfvgh</button>
-<button onClick={this.move}>fhjhvkmbm bfvgh</button>
-<button onClick={this.move}>fhjhvkmbm bfvgh</button>
+
         
       </div>
     )

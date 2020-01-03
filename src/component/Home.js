@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import './style/home.css'
 import './fillin'
-
+import * as firebase from 'firebase'
 
 class  Home extends Component{
+
 
  move=()=>{
   this.props.history.push('./fillin')

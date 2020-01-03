@@ -66,6 +66,7 @@ class Fillin extends Component{
     var email=this.state.email
     var notes=this.state.notes
      var disease=this.state.disease
+     var id =this.state.id
 
     const db = firebase.firestore();
 
@@ -76,7 +77,9 @@ db.collection("patients").add({
         Age: age,
         Email:email,
         Notes:notes,
-        Disease:disease
+        Disease:disease,
+        id:id
+
 
     })
         .then(function (docRef) {
@@ -94,8 +97,13 @@ db.collection("patients").add({
   check=(e)=>{
   console.log(e.target.checked)
   e.target.checked?
-  console.log('ttttt'):
-  console.log('ffff')
+  this.setState({
+    id:'A'
+  }):
+  this.setState({
+    id:''
+  })
+
   
    
    

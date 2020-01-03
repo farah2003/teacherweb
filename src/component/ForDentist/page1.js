@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 
 
 
+  import  Mainfordent from './main'
+
 class  FiratTab extends Component{
     render(){
         return(
             <div>
+             <Mainfordent></Mainfordent>
              
-             <h1>هنا للتابس التانية</h1>
-             <h1> الحالات راح تنعرض هان حسب التابس الي ضغظ عليه</h1>
-             <h1>هنا للتابس التانية</h1>
+             
 
         
 

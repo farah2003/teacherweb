@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-import * as firebase from 'firebase'
+import PCard from './allpage'
 
 import DNav from './navForDent'
 import './stylefordent/main.css'
@@ -8,6 +9,9 @@ import { AppBar,Tabs,Tab} from '@material-ui/core';
 import './page1'
 import './page2'
 class Mainfordent extends Component{
+
+
+
  state={
    list:[]
  }
@@ -19,23 +23,6 @@ class Mainfordent extends Component{
 
 }
 
-  componentWillMount(){
-    const db = firebase.firestore();
-
-    db.collection("Users").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          var l =[]
-          l.push(doc.data().UsersName)
-          this.setState({
-            list:l
-          })
-          
-            console.log(`${doc.id} => ${doc.data().UsersName}`);
-            console.log(this.state.list)
-        });
-    });
-
-}
 
 
   render(){
@@ -57,6 +44,7 @@ class Mainfordent extends Component{
             variant="fullWidth"
             aria-label="full width tabs example"
           >
+               <Tab label="الكل"  />
             <Tab label="خلع"  onClick={this.move1}/>
             <Tab label="تسوس اسنان" onClick={this.move2} />
             <Tab label="تراكيب"  />
@@ -64,20 +52,16 @@ class Mainfordent extends Component{
             <Tab label="Item Five"/>
           </Tabs>
         </AppBar>
-        <div>
-        <p> f mfhgn,gn hsfnmbmfghnfh</p>
-        <p> f mfhgn,gn hsfnmbmfghnfh</p>
-        <p> f mfhgn,gn hsfnmbmfghnfh</p>
-        <p> f mfhgn,gn hsfnmbmfghnfh</p>
-        </div>
+     
          
         </div>
 
-   
-
+  
 
 
       <DNav></DNav>
+
+      <PCard></PCard>
       </scrollable>
       
   
