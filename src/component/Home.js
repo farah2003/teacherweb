@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { Button ,Card} from 'antd';
 
+import { NavLink} from "react-router-dom";
 import './style/home.css'
 import './fillin'
-const { Meta } = Card;
-
+import Nav from './nav'
 
 class  Home extends Component{
 
 
  move=()=>{
+
   this.props.history.push('./fillin')
  }
  
@@ -17,11 +18,13 @@ class  Home extends Component{
 
     return(
       <div>
+        <Nav></Nav>
         <div className="container">
        
       </div>
       <div className="container1">
-      <Button type="primary" onClick={this.move}>Button</Button>
+      <NavLink to="/fillin">   <Button type="primary" onClick={this.move} style={{width:100}}> fillin </Button></NavLink> 
+     
       </div>
 
       

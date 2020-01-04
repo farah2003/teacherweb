@@ -35,7 +35,7 @@ move3=()=>{
 
 
   render(){
-
+    console.log('mainnnnnnnnnnnn')
   //  console.log(this.props)
 
     return(
@@ -45,20 +45,20 @@ move3=()=>{
     <Tabs type="card">
      
     <TabPane tab="Tab Title 1" key="1" >
-      <Button onClick={this.move1} >
+      <Button >
         <p>Content of Tab Pane 1</p>
         </Button>
       </TabPane>
    
      
       <TabPane tab="Tab Title 2" key="2" >
-      <Button  onClick={this.move2} >
+      <Button   >
         <p>Content of Tab Pane 2</p>
         </Button>
       </TabPane>
    
       <TabPane tab="Tab Title 3" key="3" >
-      <Button onClick={this.move3}  >
+      <Button   >
         <p>Content of Tab Pane 3</p>
         </Button>
       </TabPane>

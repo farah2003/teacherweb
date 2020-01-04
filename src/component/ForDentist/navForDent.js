@@ -5,6 +5,7 @@ import { Menu,Layout,Icon} from 'antd';
 
 import './stylefordent/navfar.css'
 
+
 import './profileDent'
 const { Header } = Layout;
 
@@ -12,11 +13,11 @@ const { Header } = Layout;
   
 class DNav extends Component{
   
-  move=()=>{
-
+  move1=()=>{
+    console.log('nav')
     this.props.history.push('./profileDent')
    }
-   
+
 
  
 
@@ -27,27 +28,23 @@ class DNav extends Component{
       <div className="Nav">
        
        <div>
-  <Layout className="layout">
-    <Header>
-      
-      <Menu
-        theme="dark"
-        mode="horizontal"
-        defaultSelectedKeys={['2']}
-        style={{ lineHeight: '64px' }}
-      >
-        
-        <Menu.Item key="profile">
-        <Icon type="user" >
-        <a href="https://" target="_blank" rel="noopener noreferrer"/>
-        </Icon>
-        </Menu.Item>
+         
+<Layout>
 
-       
-      </Menu>
-    </Header>
+<Header style={{ background: ' rgb(0, 151, 221)', padding: 0 }}>
+            <Icon style={{width:100}}
+              className="trigger"
+              type="user" 
+              onClick={this.move1}
+              
+            />
+          </Header>
+
+
+  
  
     </Layout>
+
 
     </div>
      

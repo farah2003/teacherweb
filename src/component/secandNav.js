@@ -12,15 +12,7 @@ class SNav extends Component{
       <Layout className="layout">
         <Header>
           
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={['2']}
-            style={{ lineHeight: '64px' }}
-          >
-            
-            <h3>welcome</h3>
-          </Menu>
+         <h1 style={{color:'white'}}>welcome</h1>
         </Header>
      
         </Layout>

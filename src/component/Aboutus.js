@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-
+import Nav from './nav'
 class Aboutus extends Component{
   render(){
     return(
       <div>
           <h1>
+          <Nav></Nav>
           Aboutus
           </h1>
           <p>

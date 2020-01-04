@@ -111,38 +111,40 @@ db.collection("patients").add({
   }
  
   render(){
+    console.log('fill in')
     return(
+      
       <div className="div">
-          <SNav className="header" ></SNav>
+        <SNav></SNav>
+         
           <div className="continer" >
           <div  className="body" >
+            
                 
            
                <p className="h1"> استمارة المريض  </p>
 
              
               <h3 className="h3">  الإسم الكامل للمريض </h3>
-              <Input placeholder="اسم المريض رباعي" onChange={this.addName} />
-              <h3  className="h3">  رقم هاتف المريض </h3>
-              <Input placeholder="رقم الهاتف" onChange={this.addPhone}/>
+              <Input  onChange={this.addName} style={{width:500}} />
+              <h3  className="h3" >  رقم هاتف المريض </h3>
+              <Input onChange={this.addPhone} style={{width:500}}/>
               <h3  className="h3">  العمر </h3>
-              <Input placeholder="العمر" onChange={this.addAge}/>
+              <Input  onChange={this.addAge} style={{width:500}}/>
               <h3  className="h3"> Email addresss </h3>
-              <Input placeholder=" الإيميل" onChange={this.addEmail}  />
+              <Input  onChange={this.addEmail} style={{width:500}} />
              
 
               <h3  className="h3"> ملاحظات إضافية  </h3>
-              <TextArea rows={4} onChange={this.addNotes} />
+              <TextArea rows={4} onChange={this.addNotes} style={{width:500}}/>
               
               <h3  className="h3">  أمراض مزمنة أو أمراض أخرى </h3>
-              <TextArea rows={4} onChange={this.addDisease} />
+              <TextArea rows={4} onChange={this.addDisease} style={{width:500}}/>
 
               <h3  className="h3"> العلاج التي تحتاجه  </h3>
               <div>
               
-        }
        
-      />
       </div>
 <div>
 
@@ -155,7 +157,13 @@ db.collection("patients").add({
               
               </div>
                <div className="button">
-               <Button type="primary" onClick={this.send}>ارسال</Button>
+           
+           
+ 
+    <Button style={{margin:20,color:" #466995",width:150}}>
+      ارسال
+    </Button>
+  
 
           </div>
 

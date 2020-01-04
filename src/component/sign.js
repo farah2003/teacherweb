@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 
 import { Input, Button } from 'antd';
-import './ForDentist/main'
+import './ForDentist/HomeDent'
 
 import * as firebase from 'firebase'
 import './style/sign.css'
@@ -28,6 +28,10 @@ class Signin extends Component{
    
     
 
+  }
+  move=()=>{
+   
+    this.props.history.push(  './ForDentist/HomeDent')
   }
   addFullName=(e)=>{
     this.setState({
@@ -83,7 +87,8 @@ class Signin extends Component{
         });
     })
     .then(
-      this.props.history.push('./ForDentist/main')
+    
+      this.props.history.push( './ForDentist/HomeDent')
     )
 
    
@@ -129,7 +134,7 @@ class Signin extends Component{
 
 
         </div>
-        <div>   <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.fire}>
+        <div>   <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.move}>
             Log in
           </Button>
  </div>

@@ -16,6 +16,7 @@ import FiratTab from './component/ForDentist/page1'
 import SecandPage from './component/ForDentist/page2'
 import PCard from './component/ForDentist/allpage'
 
+import DHome from './component/ForDentist/HomeDent'
 
 
 
@@ -30,7 +31,7 @@ class App extends Component{
 
     <BrowserRouter>
     <div>
-     <Main></Main>
+     
     <Switch>
     <Route path="/" component={Home} exact></Route>
     <Route path="/about"component={Aboutus}></Route>
@@ -44,7 +45,7 @@ class App extends Component{
     <Route path='/ForDentist/page1' component={FiratTab}></Route>
     <Route path='/ForDentist/allpage' component={PCard}></Route>
 
-
+    <Route path='/ForDentist/HomeDent' component={DHome}></Route>
 
     </Switch>
     </div>
