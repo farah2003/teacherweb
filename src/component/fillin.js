@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import { Input , Checkbox,Button } from 'antd';
+import { Input , Checkbox,Button, Card } from 'antd';
 import './style/fill.css'
 import SNav from './secandNav'
 
@@ -19,7 +19,13 @@ class Fillin extends Component{
     notes:'',
     disease:'',
     defaultChecked:'',
-    id:''
+    idA:'',
+    idB:'',
+    idC:'',
+    idD:'',
+    idE:'',
+    idF:'',
+    
 
   }
     
@@ -66,19 +72,29 @@ class Fillin extends Component{
     var email=this.state.email
     var notes=this.state.notes
      var disease=this.state.disease
-     var id =this.state.id
-
+     var idA =this.state.idA
+     var idB =this.state.idB
+     var idC =this.state.idC
+     var idD =this.state.idD
+     var idE =this.state.id
+     var idF =this.state.idF
+   
     const db = firebase.firestore();
 
 
-db.collection("patients").add({
+db.collection("patients").doc('f').add({
         Name: name,
        Phone:phone,
         Age: age,
         Email:email,
         Notes:notes,
         Disease:disease,
-        id:id
+        calssA: idA,
+        classB:idB,
+        classC:idC,
+        classD:idD,
+        classE:idE,
+        classF:idF
 
 
     })
@@ -94,34 +110,85 @@ db.collection("patients").add({
    
   
   }
-  check=(e)=>{
+  checkA=(e)=>{
   console.log(e.target.checked)
   e.target.checked?
   this.setState({
-    id:'A'
+    idA:'A'
   }):
   this.setState({
-    id:''
-  })
-
-  
-   
-   
-  
+    idA:''
+  }) 
   }
+  checkB=(e)=>{
+    console.log(e.target.checked)
+    e.target.checked?
+    this.setState({
+      idB:'B'
+    }):
+    this.setState({
+      idB:''
+    }) 
+    }
+   
+    checkC=(e)=>{
+      console.log(e.target.checked)
+      e.target.checked?
+      this.setState({
+        idC:'C'
+      }):
+      this.setState({
+        idC:''
+      }) 
+      }
  
+      checkD=(e)=>{
+        console.log(e.target.checked)
+        e.target.checked?
+        this.setState({
+          idD:'D'
+        }):
+        this.setState({
+          idD:''
+        }) 
+        }
+ 
+        checkE=(e)=>{
+          console.log(e.target.checked)
+          e.target.checked?
+          this.setState({
+            idE:'E'
+          }):
+          this.setState({
+            idE:''
+          }) 
+          }
+ 
+          checkF=(e)=>{
+            console.log(e.target.checked)
+            e.target.checked?
+            this.setState({
+              idF:'F'
+            }):
+            this.setState({
+              idF:''
+            }) 
+            }
+           
   render(){
-    console.log('fill in')
+  
     return(
       
-      <div className="div">
+      <div >
         <SNav></SNav>
          
-          <div className="continer" >
           <div  className="body" >
+
+    <Card className="card"   title={<h2 style={{marginTop:20,fontWeight:'bold',textAlign:'right' ,marginRight:30}}>استمارة</h2> }  style={{ width: 900,height:900 ,marginTop:90,marginLeft:220,marginBottom:50}}>
+      
             
-                
-           
+             
+          
                <p className="h1"> استمارة المريض  </p>
 
              
@@ -142,35 +209,59 @@ db.collection("patients").add({
               <TextArea rows={4} onChange={this.addDisease} style={{width:500}}/>
 
               <h3  className="h3"> العلاج التي تحتاجه  </h3>
+            <div style={{alignItems:'flex-end'}}> 
+        <div>
+             تلبيسة   <Checkbox onChange={this.checkA}/>
+
+              </div>
+
               <div>
-              
+             علاج عصب <Checkbox onChange={this.checkB}/> 
+              </div>
+              <div>
+              طقم اسنان <Checkbox onChange={this.checkC}/>
+            
+              </div>
+              <div>
+              حشو اضراس <Checkbox onChange={this.checkD}/>
+            
+          
+              </div>
+              <div>
+              خلع <Checkbox onChange={this.checkE}/>
+            
+              </div>
+              <div>
+            تنظيف اسنان <Checkbox onChange={this.checkF}/>
+            
+              </div>
+              </div>
+ 
+              <Button style={{color:" #466995",width:200}} onClick={this.send}>
+             ارسال
+           </Button>
+         
+       
+                
+       
+        
+              </Card>
+              </div>
        
       </div>
-<div>
-
-<Checkbox onChange={this.check}>خلع</Checkbox>
-        
+      
        
       
-      </div>
+      
               
               
-              </div>
-               <div className="button">
            
-           
- 
-    <Button style={{margin:20,color:" #466995",width:150}}>
-      ارسال
-    </Button>
-  
 
-          </div>
 
-          
 
-        </div>
-        </div>
+
+        
+       
 
 
     )

@@ -1,5 +1,5 @@
 .div{
-  background-color: #48c8df;
+ 
 }
 .header {
   
@@ -12,9 +12,9 @@
 }  
 
 .body{
-    background-color: #DBE9EE;
-    box-sizing: border-box;
-    padding: 30px;
+  
+  
+
     text-align: center;
     width: 100%;
     position: relative;
@@ -34,7 +34,7 @@
     padding-top: 30px;
     text-align: right;
     padding:30px;
-    background-color: #DBE9EE;
+   
     flex-flow: row wrap;
 	
 }

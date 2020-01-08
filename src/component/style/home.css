@@ -1,14 +1,25 @@
 .container{
-    margin: 50px auto;
+    margin:110px auto;
     height:500px;
-    width: 1000px;
- background-image: url("https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")
-  
+    width: 1500px;
+   
+    background-repeat: no-repeat;
 }
 .container1{
-    margin: 50px auto;
-    height:500px;
+    margin: 20px auto;
+    height:70px;
     width: 1000px;
+    
 
   
+}
+.b{
+    width: 80px;
+    transition: width 2s;
+    position: relative;
+}
+.b:hover{
+    width: 150px;
+
+    margin-bottom: 20;
 }

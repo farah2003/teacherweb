@@ -1,10 +1,11 @@
-.mainDiv{
-    background-image: url("https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-    height:400px;
-    width: 600px;
-    margin: 50px auto;
-    display: flex;
-}
+
 .navRight{
     justify-content: flex-start;
+}
+.divTabs{
+    background-color:rgb(151, 211, 206);
+    border: 0px red solid;
+  border-radius: 3px;
+    height:64px;
+    width: 100%;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-import { Input, Button } from 'antd';
+import { Input, Button,Card,Icon } from 'antd';
 import './ForDentist/HomeDent'
 
 import * as firebase from 'firebase'
@@ -108,42 +108,47 @@ class Signin extends Component{
 
   render(){
     return(
-      <div className="Container">
       <div>
-          <h1>signing Up as Docoter</h1>
+     <h1 style={{fontFamily:"Satisfy" ,fontSize:70,marginTop:30,marginLeft:500,color:'#002266',fontWeight:'bold'}}>Dent Guide</h1>
 
+     
 
-          <h3>  Full name  </h3>
-          <Input placeholder="Basic usage" onChange={this.addName} />
+<Card className="card"   title={<h2 style={{color:'#002266',marginTop:20,fontWeight:'bold'}}>signing Up as Docoter</h2> }  style={{ width: 500,height:650 ,marginTop:30,marginLeft:370,marginBottom:50}}>
         
+<div > 
 
-          <h3>  User Name </h3>
-          <Input placeholder="Basic usage"onChange={this.addFullName} />
-         
-          <h3> Your Email</h3>
-          <Input placeholder="Basic usage" onChange={this.addEmail} />
+
+<h4 style={{marginTop:20,fontWeight:'bold',color:'#002266'}}>Full name  </h4>
+<Input   prefix={<Icon type="user" style={{ color: '#4d4dff' }} />} onChange={this.addName}  style={{height:35}} />
+
+
+<h4 style={{marginTop:20,fontWeight:'bold',color:'#002266'}}>  User Name </h4>
+<Input   prefix={<Icon type="user" style={{ color: '#4d4dff' }} />} onChange={this.addFullName}  style={{height:35}}/>
+
+<h4 style={{marginTop:20,fontWeight:'bold',color:'#002266'}}> Your Email</h4>
+<Input  onChange={this.addEmail}   style={{height:35}}  prefix={<Icon type="mail" style={{ color: '#4d4dff' }} />}/>
+
+
+<h4 style={{marginTop:20,fontWeight:'bold',color:'#002266'}}> Password </h4>
+<Input.Password onChange={this.addPassword}  prefix={<Icon type="lock" style={{ color: '#4d4dff' }} />}  style={{height:35}}/>
+
+
+<h4 style={{marginTop:20,fontWeight:'bold',color:'#002266'}}>Your Phone Number</h4>
+<Input onChange={this.addNumber}   style={{height:35}}  prefix={<Icon type="phone" style={{ color: '#4d4dff' }} />} />
+
+
+
+</div>
+<div style={{marginTop:30,}}>   <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.move} style={{width:450,height:40}}> 
+ sign up
+</Button>
+</div>
+        </Card>
       
-
-          <h3> Password </h3>
-          <Input.Password placeholder="input password" onChange={this.addPassword} />
-
-
-          <h3> Your Phone Number</h3>
-          <Input placeholder="Basic usage" onChange={this.addNumber} />
-         
-
-
-        </div>
-        <div>   <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.move}>
-            Log in
-          </Button>
- </div>
-
-
-
-
-
-      </div>
+  
+      
+        </div>  
+    
     )
   }
 }

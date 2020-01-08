@@ -5,7 +5,7 @@ import PCard from './allpage'
 
 import DNav from './navForDent'
 import './stylefordent/main.css'
-;
+
 import './page1'
 import './page2'
 class Mainfordent extends Component{

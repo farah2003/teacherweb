@@ -25,18 +25,19 @@ class DNav extends Component{
     console.log(this.props)
 
     return(
-      <div className="Nav">
+      <div  style={{position:"fixed",marginTop:0}}>
        
-       <div>
+     
          
 <Layout>
 
-<Header style={{ background: ' rgb(0, 151, 221)', padding: 0 }}>
+<Header style={{ background: ' rgb(0, 151, 221)',marginTop: 0,position:"fixed",width:'100%' }}>
             <Icon style={{width:100}}
               className="trigger"
               type="user" 
               onClick={this.move1}
-              
+              style={{ fontSize: '30px', color: 'black'  }}
+            
             />
           </Header>
 
@@ -45,12 +46,10 @@ class DNav extends Component{
  
     </Layout>
 
-
-    </div>
-     
+   </div>
 
         
-      </div>
+    
     )
   }
 }

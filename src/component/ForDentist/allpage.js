@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import DHome from './HomeDent'
 import * as firebase from 'firebase'
 import './stylefordent/allpage.css'
 import Mainfordent from './main'
@@ -45,7 +45,7 @@ render(){
   const{name,age,phone}=this.state
   return (
     <div className="continer">
-      <Mainfordent  {...this.props}></Mainfordent>
+          <DHome {...this.props}>  </DHome>
     <div className="paper">
       
         <div   >

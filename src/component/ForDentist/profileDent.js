@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 
+import { Tabs,Button } from 'antd';
+
 
 import DNav from './navForDent'
+import './stylefordent/main.css'
+
+import './page2'
+
+const { TabPane } = Tabs;
 
 class Profile extends Component{
 
@@ -14,7 +21,7 @@ class Profile extends Component{
    
   <div className="card-container">
     <DNav {...this.props}></DNav>
-    <h1>prpfile</h1>
+    <h1>pr</h1>
       </div>
 
 

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 
 import './stylefordent/allpage.css'
-import DHome from './HomeDent'
 
-class SecandPage extends Component{
+import DHome from './HomeDent'
+class FIFPage extends Component{
 
 
   render(){
     return(
       
       <div >
-              <DHome {...this.props}>  </DHome>
-       222222222222222222
-
+                <DHome {...this.props}>  </DHome>
+  5555555555555555555555
       </div>
 
 
@@ -23,4 +22,4 @@ class SecandPage extends Component{
   }
 }
 
-export default SecandPage;
+export default FIFPage;
