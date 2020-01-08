@@ -9,7 +9,7 @@ import { Menu,Layout,Input} from 'antd';
 
 import DNav from './navForDent'
 import './stylefordent/main.css'
-
+import './profileDent'
 
 const { Header } = Layout;
 const{Search}=Input;
@@ -17,7 +17,7 @@ class DHome extends Component{
 
     move1=()=>{
         console.log('nav')
-        this.props.history.push('./page1')
+        this.props.history.push('./profileDent')
        }
   render(){
     return( 
