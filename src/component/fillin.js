@@ -82,7 +82,7 @@ class Fillin extends Component{
     const db = firebase.firestore();
 
 
-db.collection("patients").doc('f').add({
+db.collection("patients").doc().set({
         Name: name,
        Phone:phone,
         Age: age,

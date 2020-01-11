@@ -27,6 +27,7 @@ class  Home extends Component{
         <Carousel autoplay>
     <div className="slider">
 
+
     <div>
     <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}/> 
     </div>
@@ -45,14 +46,17 @@ class  Home extends Component{
     </div>
 
   </Carousel>
-  <div style={{ backgroundColor:'#2C3A47', height:200}}>
+  <div style={{ backgroundColor:'#ffffff', height:200}}>
     <div style={{marginLeft:340,paddingTop:30}}>
-    <h1 style={{ color:'#ffffff'}}> <Icon type="down-square" /> YOU CAN SEND YOUR STATE FROM HERE <Icon type="down-square" /> </h1>
+    <h1 style={{ color:'#3742fa'}}> <Icon type="down-square" /> YOU CAN SEND YOUR STATE FROM HERE <Icon type="down-square" /> </h1>
     </div>
   
   <div style={{marginLeft:550, paddingTop:20 }}>
-  <NavLink to="/fillin">   <Button style={{width:200, height:60}} onClick={this.move} ghost> <h2 style={{fontFamily:'AdventPro-Bold	', color:'White'}}> Fill In </h2>  </Button></NavLink> 
+  <NavLink to="/fillin">   <Button  style={{width:200, height:60}} onClick={this.move} ghost> <h2 style={{fontFamily:'AdventPro-Bold	', color:'#70a1ff'}}> Fill In </h2>  </Button></NavLink> 
   </div>
+      </div>
+      <div>
+        {console.log("helooooo")}
       </div>
 
 
