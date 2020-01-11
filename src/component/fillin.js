@@ -65,6 +65,69 @@ class Fillin extends Component{
       disease:e.target.value
     })
   }
+  checkA=(e)=>{
+    console.log(e.target.checked)
+    e.target.checked?
+    this.setState({
+      idA:'A'
+    }):
+    this.setState({
+      idA:''
+    }) 
+    }
+    checkB=(e)=>{
+      console.log(e.target.checked)
+      e.target.checked?
+      this.setState({
+        idB:'B'
+      }):
+      this.setState({
+        idB:''
+      }) 
+      }
+     
+      checkC=(e)=>{
+        console.log(e.target.checked)
+        e.target.checked?
+        this.setState({
+          idC:'C'
+        }):
+        this.setState({
+          idC:''
+        }) 
+        }
+   
+        checkD=(e)=>{
+          console.log(e.target.checked)
+          e.target.checked?
+          this.setState({
+            idD:'D'
+          }):
+          this.setState({
+            idD:''
+          }) 
+          }
+   
+          checkE=(e)=>{
+            console.log(e.target.checked)
+            (e.target.checked)?
+            this.setState({
+              idE:'E'
+            }):this.setState({
+              idE:''
+            }) 
+            }
+   
+            checkF=(e)=>{
+              console.log(e.target.checked)
+              e.target.checked?
+              this.setState({
+                idF:'F'
+              }):
+              this.setState({
+                idF:''
+              }) 
+              }
   send=()=>{
     var name=this.state.name;
     var phone=this.state.phone;
@@ -82,7 +145,7 @@ class Fillin extends Component{
     const db = firebase.firestore();
 
 
-db.collection("patients").doc().add({
+db.collection("patients").doc('b').set({
         Name: name,
        Phone:phone,
         Age: age,
@@ -110,70 +173,7 @@ db.collection("patients").doc().add({
    
   
   }
-  checkA=(e)=>{
-  console.log(e.target.checked)
-  e.target.checked?
-  this.setState({
-    idA:'A'
-  }):
-  this.setState({
-    idA:''
-  }) 
-  }
-  checkB=(e)=>{
-    console.log(e.target.checked)
-    e.target.checked?
-    this.setState({
-      idB:'B'
-    }):
-    this.setState({
-      idB:''
-    }) 
-    }
-   
-    checkC=(e)=>{
-      console.log(e.target.checked)
-      e.target.checked?
-      this.setState({
-        idC:'C'
-      }):
-      this.setState({
-        idC:''
-      }) 
-      }
- 
-      checkD=(e)=>{
-        console.log(e.target.checked)
-        e.target.checked?
-        this.setState({
-          idD:'D'
-        }):
-        this.setState({
-          idD:''
-        }) 
-        }
- 
-        checkE=(e)=>{
-          console.log(e.target.checked)
-          e.target.checked?
-          this.setState({
-            idE:'E'
-          }):
-          this.setState({
-            idE:''
-          }) 
-          }
- 
-          checkF=(e)=>{
-            console.log(e.target.checked)
-            e.target.checked?
-            this.setState({
-              idF:'F'
-            }):
-            this.setState({
-              idF:''
-            }) 
-            }
+  
            
   render(){
   

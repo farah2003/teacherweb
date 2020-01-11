@@ -5,7 +5,7 @@ import darkTheme from '@ant-design/dark-theme'
 
 import * as firebase from 'firebase'
 import './sign'
-import './ForDentist/main'
+import './ForDentist/HomeDent'
 import './style/login.css'
 class Login extends Component{
   state={
@@ -40,12 +40,12 @@ class Login extends Component{
      }).catch(function (error) {
              console.error("Error adding document: ", error);
          }).then(
-       this.props.history.push('./ForDentist/HomeDent')
+       this.props.history.push('./ForDentist/Homedent')
+
      )}
      signup=()=>{
        console.log('fdfdjs')
       this.props.history.push('./sign')
-
      }
  
   render(){

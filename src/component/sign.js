@@ -71,7 +71,12 @@ class Signin extends Component{
         var errorMessage = error.message;
         // ...
     }).then(function(){
-    db.collection("Users").add({
+      var user = firebase.auth().currentUser;
+
+
+      console.log(user,"user")
+
+    db.collection("Users").doc(user.uid).set({
         Name: firstN,
        UsersName: lastN,
         phone: PhoneNum,
@@ -139,7 +144,9 @@ class Signin extends Component{
 
 
 </div>
-<div style={{marginTop:30,}}>   <Button type="primary" htmlType="submit" className="login-form-button" onClick={this.move} style={{width:450,height:40}}> 
+<div style={{marginTop:30,}}> 
+  <Button type="primary" htmlType="submit" className="login-form-button" 
+  onClick={this.fire} style={{width:450,height:40}}> 
  sign up
 </Button>
 </div>

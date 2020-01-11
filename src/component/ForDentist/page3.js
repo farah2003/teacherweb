@@ -20,7 +20,7 @@ class ThirdPage extends Component{
   confirm = (item)=> {
   console.log(item)
   
-    this.update(item)
+    this.update()
   }
 
   cancel = ()=> {   

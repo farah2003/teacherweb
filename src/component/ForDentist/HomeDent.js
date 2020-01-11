@@ -13,7 +13,15 @@ import './profileDent'
 
 const { Header } = Layout;
 const{Search}=Input;
+
+
 class DHome extends Component{
+
+  
+
+
+
+
 
     move1=()=>{
         console.log('nav')
@@ -45,7 +53,7 @@ class DHome extends Component{
         
           <h1>fh fgn</h1>
        
-         <h4>gh gfhjdgjhn</h4>
+         {/* <h4>gh gfhjdgjhn</h4> */}
          
           
 
@@ -53,9 +61,11 @@ class DHome extends Component{
         <div style={{float:'right',marginTop:23,marginRight:35}}>
           <Search  style={{width:380}}size='large'  placeholder="input search text" onSearch={value => console.log(value)} enterButton />
           </div>
+          <div className="menuscroll">
           <Menu
            
             mode="horizontal"
+            id="navbar"
             defaultSelectedKeys={['2']}
             style={{ lineHeight: '80px',color:'red'}}
           >
@@ -69,6 +79,7 @@ class DHome extends Component{
             <Menu.Item key="6" style={{width:120}}><NavLink to='/ForDentist/page5'   style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}> خلع  </NavLink></Menu.Item>
             <Menu.Item key="7"  style={{width:120}}><NavLink to='/ForDentist/page6'   style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}> تنظيف اسنان </NavLink></Menu.Item>
           </Menu>
+          </div>
           </div>
 
    
