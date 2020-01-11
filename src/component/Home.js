@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Button ,Card,Layout,Icon} from 'antd';
+import React, { Component, Im } from 'react';
+import { Button ,Card,Layout,Icon, Carousel} from 'antd';
 
 import { NavLink} from "react-router-dom";
 import './style/home.css'
@@ -20,13 +20,54 @@ class  Home extends Component{
       <div>
         <Nav></Nav>
        
-        <div style={{marginTop:0}}> <img style={{marginTop:0}}   src={require("../dent.jpg")} /></div>
+        <div >
+          
+     
+
+        <Carousel autoplay>
+    <div className="slider">
+
+    <div>
+    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}/> 
+    </div>
+
+    </div>
+    <div>
+    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}/> 
+    </div>
+
+    <div>
+    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}/> 
+    </div>
+
+    <div>
+    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}/> 
+    </div>
+
+  </Carousel>
+  <div style={{ backgroundColor:'#2C3A47', height:200}}>
+    <div style={{marginLeft:340,paddingTop:30}}>
+    <h1 style={{ color:'#ffffff'}}> <Icon type="down-square" /> YOU CAN SEND YOUR STATE FROM HERE <Icon type="down-square" /> </h1>
+    </div>
+  
+  <div style={{marginLeft:550, paddingTop:20 }}>
+  <NavLink to="/fillin">   <Button style={{width:200, height:60}} onClick={this.move} ghost> <h2 style={{fontFamily:'AdventPro-Bold	', color:'White'}}> Fill In </h2>  </Button></NavLink> 
+  </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
    
      
-      <div className="container1">
-      <NavLink to="/fillin">   <Button type="primary" onClick={this.move}className="b"> fillin </Button></NavLink> 
-     
-      </div>
+
       <Footer style={{backgroundColor:'#01020e',height:'300px'}}>
         <div style={{padding:20}}>
        <h2 style={{color:'white'}}>Contact us</h2>
@@ -53,9 +94,20 @@ class  Home extends Component{
        
        <a href='http://facebook.com/profile.php?id=100025261596847'>  <Icon type="facebook" style={{ fontSize:30}} /><label  style={{ color: 'white' ,fontSize:21 }} >  Farah Shaquora </label></a>
        
-  
-  
+       
+       <label  style={{ color: 'white' ,fontSize:21, paddingLeft:200, paddingTop:400 }} >  Gaza Strip </label>
+
+       <label  style={{ color: 'white' ,fontSize:21, paddingLeft:200, paddingBottom:100 }} >  Gaza Strip
+       901 Boxnorth west
+        </label>
+
+
           </div>
+        
+            
+            
+          
+
       
 
       </Footer>
