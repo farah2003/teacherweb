@@ -40,7 +40,7 @@ class Login extends Component{
      }).catch(function (error) {
              console.error("Error adding document: ", error);
          }).then(
-       this.props.history.push('./ForDentist/main')
+       this.props.history.push('./ForDentist/HomeDent')
      )}
      signup=()=>{
        console.log('fdfdjs')
