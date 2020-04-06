@@ -29,7 +29,7 @@ class Nav extends Component{
             style={{ lineHeight: '115px'}}
           >
         
-            <Menu.Item key="1"  style={{width:170}}><NavLink to="/" style={{fontWeight:'bold',fontSize:'25',textAlign:'center',fontWeight:'bold'}}>Home</NavLink></Menu.Item>
+            <Menu.Item key="1"  style={{width:170}}><NavLink to="/" style={{fontSize:'25',textAlign:'center',fontWeight:'bold'}}>Home</NavLink></Menu.Item>
     
             <Menu.Item key="2"  style={{width:170}}><NavLink to="/contact"  style={{fontWeight:'bold',fontSize:'30',textAlign:'center'}}>contact us</NavLink></Menu.Item>
             <Menu.Item key="3"  style={{width:170}}><NavLink to="/about"  style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>about us</NavLink></Menu.Item>

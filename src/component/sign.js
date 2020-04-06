@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 
 import { Input, Button,Card,Icon } from 'antd';
-import './ForDentist/HomeDent'
+import './ForDentist/allpage'
 
 import * as firebase from 'firebase'
 import './style/sign.css'
@@ -67,14 +67,15 @@ class Signin extends Component{
     firebase.auth().createUserWithEmailAndPassword(email,
      password).catch(function (error) {
         // Handle Errors here.
-        var error = error.code;
-        var errorMessage = error.message;
+        var errorM = error.code;
+        
+     console.log('eee',errorM)
         // ...
-    }).then(function(){
+    }).then(()=>{
       var user = firebase.auth().currentUser;
-
-
-      console.log(user,"user")
+  
+      console.log('user',user)
+      
 
     db.collection("Users").doc(user.uid).set({
         Name: firstN,
@@ -93,7 +94,7 @@ class Signin extends Component{
     })
     .then(
     
-      this.props.history.push( './ForDentist/HomeDent')
+      this.props.history.push( './ForDentist/allpage')
     )
 
    

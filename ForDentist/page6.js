@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import {Card , Button , Popconfirm, message} from 'antd';
 import DHome from './HomeDent'
 import * as firebase from 'firebase'
-class FIFPage extends Component{
- 
 
+class SPage extends Component{
   state={
     list:[],
    ListForId:[],
@@ -60,11 +59,11 @@ class FIFPage extends Component{
     const db = firebase.firestore();
 
    let  washingtonRef = db.collection("patients").doc(i)
- //   let  user = firebase.auth().currentUser;
+    let  user = firebase.auth().currentUser;
  
   return washingtonRef.update({
     check: true,
-    //id:user
+    id:user
   })
 
   .then(()=> {
@@ -91,7 +90,7 @@ class FIFPage extends Component{
     return(
     
       <div >
-          <DHome{...this.props}></DHome>
+        
         {
 
          list.map((item,index)=>{
@@ -133,4 +132,5 @@ class FIFPage extends Component{
     )
   }
 }
-export default FIFPage;
+
+export default SPage;

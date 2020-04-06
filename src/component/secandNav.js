@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import './style/header.css';
-import { Menu,Layout} from 'antd';
+import {Layout} from 'antd';
 const { Header } = Layout;
 
 class SNav extends Component{

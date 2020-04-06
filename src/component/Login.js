@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Icon, Input, Button, Checkbox, Card } from 'antd';
+import { Icon, Input, Button, Card } from 'antd';
 
-import darkTheme from '@ant-design/dark-theme'
+
 
 import * as firebase from 'firebase'
 import './sign'
@@ -34,8 +34,8 @@ class Login extends Component{
     firebase.auth().signInWithEmailAndPassword(email,
       password).catch(function (error) {
          // Handle Errors here.
-         var error = error.code;
-         var errorMessage = error.message;
+         var errorM = error.code;
+         console.log(errorM)
          // ...
      }).catch(function (error) {
              console.error("Error adding document: ", error);
@@ -87,7 +87,7 @@ class Login extends Component{
           <div  style={{float: 'right' ,width:600,height:620,marginTop:0 ,marginRight:100}} >
                      
  <img style={{backgroundColor:'red', width:'600',height:'100%',marginRight:100,opacity:'0,5' 
-  ,filter: 'alpha(opacity=50)'}}  src={require("../log.png")} onClick={this.pri}/>
+  ,filter: 'alpha(opacity=50)'}}  src={require("../log.png")} onClick={this.pri} alt="img"/>
             
            </div>
              

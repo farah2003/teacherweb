@@ -67,67 +67,70 @@ class Fillin extends Component{
   }
   checkA=(e)=>{
     console.log(e.target.checked)
-    e.target.checked?
+    if (e.target.checked===true){
     this.setState({
       idA:'A'
-    }):
+    })
     this.setState({
       idA:''
     }) 
-    }
+    }}
     checkB=(e)=>{
       console.log(e.target.checked)
-      e.target.checked?
+      if (e.target.checked===true){
       this.setState({
         idB:'B'
-      }):
+      })
       this.setState({
         idB:''
       }) 
-      }
+      }}
      
       checkC=(e)=>{
         console.log(e.target.checked)
-        e.target.checked?
+        if (e.target.checked===true){
         this.setState({
           idC:'C'
-        }):
+        })
         this.setState({
           idC:''
         }) 
-        }
+        }}
    
         checkD=(e)=>{
           console.log(e.target.checked)
-          e.target.checked?
+          if (e.target.checked===true){
           this.setState({
             idD:'D'
-          }):
+          })
           this.setState({
             idD:''
           }) 
           }
-   
-          checkE=(e)=>{
-            console.log(e.target.checked)
-            (e.target.checked)?
-            this.setState({
-              idE:'E'
-            }):this.setState({
-              idE:''
-            }) 
-            }
-   
-            checkF=(e)=>{
-              console.log(e.target.checked)
-              e.target.checked?
-              this.setState({
-                idF:'F'
-              }):
-              this.setState({
-                idF:''
-              }) 
-              }
+        }
+
+   checkF=(e)=>{
+     console.log(e.target.checked)
+    if (e.target.checked===true){
+       this.setState({
+       idF:'F'
+              })
+   this.setState({
+       idF:''
+        }) 
+      }}
+      checkE=(e)=>{
+     console.log(e.target.checked)
+     if (e.target.checked===true){
+       this.setState({
+       idF:'E'
+       })
+       this.setState({
+       idF:''
+        }) 
+       }}
+
+
   send=()=>{
     var name=this.state.name;
     var phone=this.state.phone;
@@ -139,13 +142,14 @@ class Fillin extends Component{
      var idB =this.state.idB
      var idC =this.state.idC
      var idD =this.state.idD
-     var idE =this.state.id
      var idF =this.state.idF
+     var idE =this.state.idE
    
     const db = firebase.firestore();
 
 
-db.collection("patients").doc('b').set({
+db.collection("patients").add({
+
         Name: name,
        Phone:phone,
         Age: age,
@@ -160,14 +164,13 @@ db.collection("patients").doc('b').set({
         classF:idF
 
 
-    })
-        .then(function (docRef) {
+    }).then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);
-        }) .then(
-      this.props.history.push('./')
+        }).then(
+      this.props.history.push('./ForDentist/HomeDent')
     )
 
    

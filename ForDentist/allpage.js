@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import {Card , Button , Popconfirm, message} from 'antd';
 import DHome from './HomeDent'
 import * as firebase from 'firebase'
-class FIFPage extends Component{
- 
-
+export default class PCard  extends  Component{
   state={
     list:[],
    ListForId:[],
@@ -14,7 +12,7 @@ class FIFPage extends Component{
   confirm = (item)=> {
   console.log(item)
   
-    this.update(item)
+    this.update()
   }
   cancel = ()=> {   
   
@@ -32,7 +30,7 @@ class FIFPage extends Component{
  
     let newList =[]
 
-    db.collection("patients").where('classC','==','C').get().then((userSnapshot) => {
+    db.collection("patients").get().then((userSnapshot) => {
     console.log( userSnapshot.docs)
         
       userSnapshot.docs.map(doc =>{
@@ -59,12 +57,12 @@ class FIFPage extends Component{
  
     const db = firebase.firestore();
 
-   let  washingtonRef = db.collection("patients").doc(i)
- //   let  user = firebase.auth().currentUser;
+   let  washingtonRef = db.collection("patients").add
+    let  user = firebase.auth().currentUser;
  
   return washingtonRef.update({
     check: true,
-    //id:user
+    id:user
   })
 
   .then(()=> {
@@ -91,7 +89,10 @@ class FIFPage extends Component{
     return(
     
       <div >
-          <DHome{...this.props}></DHome>
+        
+<div style={{paddingBottom:100}}>
+     <DHome{...this.props}></DHome>
+     </div>
         {
 
          list.map((item,index)=>{
@@ -131,6 +132,4 @@ class FIFPage extends Component{
       </div>
 
     )
-  }
-}
-export default FIFPage;
+  }}

@@ -30,19 +30,8 @@ class DHome extends Component{
   render(){
     return( 
      <div >
-           <div style={{height:60,width:"100%",marginTop:0}}>
-        <div style={{paddingTop:18,float:"right",marginRight:70}}>
-         <Icon  type="user" 
-         onClick={this.move1}
-         style={{ color: '#4d4dff',fontSize: '28px',paddingTop:0,marginRight:36 }} />
-         <Icon  type="setting" style={{fontSize: '27px', color: '#4d4dff' }} />
-          </div>
-          <div>
-          <label className="Label" style={{marginLeft:120 ,paddingTop:60,color:'blue',fontFamily: 'Satisfy',fontSize:30}}>Dent Guide</label>
-          </div>
-        
-        </div>
-{/*<Header style={{ background: ' rgb(0, 151, 221)',marginTop: 0,position:"fixed",width:'100%' }}>
+
+<Header style={{ background: ' rgb(0, 151, 221)',marginTop: 0,position:"fixed",width:'100%' }}>
             <Icon 
               className="trigger"
               type="user" 
@@ -64,11 +53,11 @@ class DHome extends Component{
         
           <h1>fh fgn</h1>
        
-    */}
+       
          
-          <div style={{borderTop:"1px solid #f2f2f2"}}></div>
+          
 
-          <div style={{float:'left',width:'100%'}}>
+          <div style={{float:'left',width:'100%',position:'fixed'}}>
         <div style={{float:'right',marginTop:23,marginRight:35}}>
           <Search  style={{width:380}}size='large'  placeholder="input search text" onSearch={value => console.log(value)} enterButton />
           </div>
