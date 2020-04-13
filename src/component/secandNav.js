@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import darkTheme from '@ant-design/dark-theme'
 
 
 import './style/header.css';
@@ -10,9 +11,9 @@ class SNav extends Component{
     return(
       <div className="Nav">
       <Layout className="layout">
-        <Header>
+        <Header style={{ background: darkTheme , width:'100%',height:60}}  > 
           
-         <h1 style={{color:'white'}}>welcome</h1>
+         <h1 style={{color:'white'}}>Fill in</h1>
         </Header>
      
         </Layout>

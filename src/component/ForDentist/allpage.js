@@ -91,17 +91,56 @@ export default class PCard  extends  Component{
       return(
       
         <div >
-          <DHome{...this.props} style={{paadingBottom:400}}></DHome>
+          <DHome{...this.props} style={{paadingBottom:400,marginTop:0}}></DHome>
+          <div style={{backgroundColor:"#e6e6fa"}}>
           {
   
-           list.map((item,index)=>{
+          list.map((item,index)=>{
            
             return(
-           <div style={{marginTop:100}}> 
-    <div>
+
+           <div style={{paddingTop:100}}> 
+    <div >
+
+    
+    <Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30,textAlign:"right"}}>sara Shaqoura</h4> }  style={{ width: 800,height:230 ,marginLeft:220,marginBottom:0, paddingTop:0}}>
+             <div style={{textAlign:"right",display:"flex",height: 200}}>
+             <div style={{float:"left",height: 200,marginLeft:50}}> 
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+          
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+          
+              <div style={{marginTop:0}}>
+    <Popconfirm
+    title="Are you sure delete this task?"
+    onConfirm={()=>this.confirm()}
+    onCancel={this.cancel}
+    okText="Yes"
+    cancelText="No"
+  >
+            <Button type="primary" style={{width:200,marginRight:60}}> select this  </Button>
+  </Popconfirm>
+  </div>
+              </div> 
+              <div style={{float:"right",height: 200,marginLeft:160}}>
+           
+
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              
+
+    </div>
+    
+  
+    </div>
+              
+  
+              </Card>
            
                
-               <Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>{item.Name}</h4> }  style={{ width: 900,height:200 ,marginLeft:220,marginBottom:40, marginTop:10}}>
+              {/* <Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>{item.Name}</h4> }  style={{ width: 900,height:200 ,marginLeft:220,marginBottom:40, marginTop:10}}>
              
              
               <label>{item.age}</label><h4>:االعمر</h4><label>16</label>
@@ -119,14 +158,15 @@ export default class PCard  extends  Component{
     </Popconfirm>
               
               
-              </Card>
+            </Card>*/}
   
             </div>
             </div>
   
             )}
   
-            )}   
+         )
+        }</div>
   
         </div>
   

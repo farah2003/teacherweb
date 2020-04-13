@@ -30,15 +30,15 @@ class DHome extends Component{
   render(){
     return( 
      <div >
-           <div style={{height:60,width:"100%",marginTop:0}}>
+           <div style={{height:60,width:"100%",marginTop:0,backgroundColor:"#001a33"}}>
         <div style={{paddingTop:18,float:"right",marginRight:70}}>
          <Icon  type="user" 
          onClick={this.move1}
-         style={{ color: '#4d4dff',fontSize: '28px',paddingTop:0,marginRight:36 }} />
-         <Icon  type="setting" style={{fontSize: '27px', color: '#4d4dff' }} />
+         style={{ color: 'white',fontSize: '28px',paddingTop:0,marginRight:36 }} />
+         <Icon  type="setting" style={{fontSize: '27px', color: 'white' }} />
           </div>
           <div>
-          <label className="Label" style={{marginLeft:120 ,paddingTop:60,color:'blue',fontFamily: 'Satisfy',fontSize:30}}>Dent Guide</label>
+          <label className="Label" style={{marginLeft:120 ,paddingTop:60,color:'white',fontFamily: 'Satisfy',fontSize:30}}>Dent Guide</label>
           </div>
         
         </div>

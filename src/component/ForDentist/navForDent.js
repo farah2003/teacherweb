@@ -31,7 +31,7 @@ class DNav extends Component{
          
 <Layout>
 
-<Header style={{ background: ' rgb(0, 151, 221)',marginTop: 0,position:"fixed",width:'100%' }}>
+<Header style={{ background: ' #3366ff',marginTop: 0,position:"fixed",width:'100%' }}>
             <Icon 
               className="trigger"
               type="user" 

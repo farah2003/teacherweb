@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Input, Button,Card,Icon } from 'antd';
 import './HomeDent'
-
+import darkTheme from '@ant-design/dark-theme'
 import * as firebase from 'firebase'
 
 import './stylefordent/main.css'
@@ -20,7 +20,8 @@ class Profile extends Component{
     UserName:'',
     Phone:'',
     Name:'',
-    Email:''
+    Email:'',
+    userid:""
 }
 
   componentWillMount(){
@@ -31,13 +32,20 @@ class Profile extends Component{
   
   }
   getuserCard = ()=>{
-    console.log("fdg ")
-    const db = firebase.firestore();
+
+    let s=[]
+     const db = firebase.firestore();
+
+   
    const {list}=this.state
     const  user = firebase.auth().currentUser;
-    let newList =[]
+ 
 
-    db.collection("patients").where('id','==',user.uid).get().then((userSnapshot) => {
+   //  
+   console.log('state',this.state.userid)
+    let newList =[]
+   
+    db.collection("patients").where('id','==',"").get().then((userSnapshot) => {
 
         
       userSnapshot.docs.map(doc =>
@@ -51,16 +59,16 @@ class Profile extends Component{
     this.setState({
         list:newList
       })
-      console.log(this.state.list)
+    
 })
   }
   getUseInfo= ()=>{
     const db = firebase.firestore();
     
     const  user = firebase.auth().currentUser;
-   console.log('user id ',user.uid) 
-    db.collection("Users").doc(user.uid).get().then((userdoc) =>{
-      console.log("data",userdoc.data())
+
+    /*db.collection("Users").doc(user.uid).get().then((userdoc) =>{
+
 
       var UserName=userdoc.data().UsersName
       var Phone=userdoc.data().phone
@@ -78,7 +86,7 @@ class Profile extends Component{
   
   
       })
-  
+  */
   }
   move1=()=>{
    
@@ -93,28 +101,28 @@ class Profile extends Component{
      
       <div style={{flex:1}}>
         {/*header*/}
-        <div style={{height:60}}>
+        <div style={{height:60,backgroundColor:"#001a33"}}>
         <div style={{paddingTop:18,float:"right",marginRight:70}}>
-         <Icon  type="home" style={{ color: '#4d4dff',fontSize: '28px',paddingTop:0,marginRight:36 }}
+         <Icon  type="home" style={{ color: 'white',fontSize: '28px',paddingTop:0,marginRight:36 }}
          onClick={this.move1} />
-         <Icon  type="setting" style={{fontSize: '27px', color: '#4d4dff' }} />
+         <Icon  type="setting" style={{fontSize: '27px', color: 'white' }} />
           </div>
           <div>
-          <label className="Label" style={{marginLeft:120 ,paddingTop:60,color:'blue',fontFamily: 'Satisfy',fontSize:30}}>Dent Guide</label>
+          <label className="Label" style={{marginLeft:120 ,paddingTop:60,color:'white',fontFamily: 'Satisfy',fontSize:30}}>Dent Guide</label>
           </div>
         
         </div>
      {/*profil*/}
-        <div style={{width:"900", backgroundColor:"#add8e6",height:200,marginTop:0,marginBottom:130}}>
+        <div style={{width:"900", backgroundColor:"#e6e6fa",height:200,marginTop:0,marginBottom:130}}>
 
         <div style={{width:500,height:200,display:"flex",paddingTop:50}} >
 
 <div style={{height:300,float:"left"}}>
-<img src={require('../ForDentist/image.png' )} style={{width:"70%",height:"60%",borderRadius:"50%",marginLeft:90,marginTop:60,marginBottom:50}} />
+<img src={require('../ForDentist/image.png' )} style={{ border:"6px solid #f2f2f2",width:"70%",height:"60%",borderRadius:"50%",marginLeft:90,marginTop:60,marginBottom:50,}} />
 </div>
 
 <div style={{float:"right",height:400,marginTop:150,marginLeft:30,width:400}}>
-<h2>{this.state.UserName}</h2>
+<h2>farah shaqoura{this.state.UserName}</h2>
 <h4>student level 5</h4>
 
   
@@ -132,7 +140,7 @@ class Profile extends Component{
  
 
 
- <div style={{display:"flex",backgroundColor:"#e6e6fa"}}>
+ <div style={{display:"flex",backgroundColor:"#e6e6fa",height:650}}>
 {/*inf*/}
 <div style={{float:"left",width:300,marginLeft:100,marginTop:50}}>
 
@@ -141,7 +149,7 @@ class Profile extends Component{
 <Icon  type="user" style={{fontSize: '20px', color: '#4d4dff' }} />
 </div>
 <div style={{float:"left"}}>
-<h4>{this.state.Name}</h4>
+<h4>farah shaqoura{this.state.Name}</h4>
 </div>
 </div>
 <div style={{display:"flex"}}>
@@ -149,7 +157,7 @@ class Profile extends Component{
 <Icon type="mail" style={{ color: '#4d4dff',fontSize: '20px' }} />
 </div>
 <div style={{float:"left"}}>
-<h4>{this.state.Email}</h4>
+<h4> dfrg@gmail.com{this.state.Email}</h4>
 </div>
 </div>
 <div style={{display:"flex"}}>
@@ -157,30 +165,85 @@ class Profile extends Component{
 <Icon  type="phone" style={{ color: '#4d4dff',fontSize: '20px' }} />
 </div>
 <div style={{float:"left"}}>
-<h4>{this.state.Phone}</h4>
+<h4>098678787{this.state.Phone}</h4>
+<Button style={{color:"#4d4dff",width:200,backgroundColor: '#03a9f4',height:40, width: 200,borderRadius:30,marginRight:100,
+    marginBottom:20}}><h4 style={{color:'white'}}>EDIT</h4></Button>
+          
 </div>
+
 </div>
 
 
 </div>
 
 {/*card*/}
-  { list.map((item,index)=>{
-    return(
+{ /* { list.map((item,index)=>{
+/ return(*/}
 
 <div style={{float:"right"}}>
+  <h1 style={{marginLeft:90,marginBottom:30,marginTop:30}}> celected</h1>
 <Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>FCH XF</h4> }  style={{ width: 700,height:200 ,marginLeft:90,marginBottom:40, marginTop:10}}>
+<div style={{textAlign:"right",display:"flex",height: 200}}>
+             <div style={{float:"left",height: 200,marginLeft:50}}> 
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+          
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+          
+        
+              </div> 
+              <div style={{float:"right",height: 200,marginLeft:160}}>
+           
+
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              
+
+    </div>
+    
+  
+    </div> 
+          
+         {/*<h4>:االعمر</h4><label>item.Name}</label>
+         <h4>:االعمر</h4><label>item.id}</label>*/}
           
           
-         <h4>:االعمر</h4><label>{item.Name}</label>
-         <h4>:االعمر</h4><label>{item.id}</label>
+          
+          </Card>
+          <Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>FCH XF</h4> }  style={{ width: 700,height:200 ,marginLeft:90,marginBottom:5, marginTop:10}}>
+<div style={{textAlign:"right",display:"flex",height: 200}}>
+             <div style={{float:"left",height: 200,marginLeft:50}}> 
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+          
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+          
+        
+              </div> 
+              <div style={{float:"right",height: 200,marginLeft:160}}>
+           
+
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              
+
+    </div>
+    
+  
+    </div> 
+          
+         {/*<h4>:االعمر</h4><label>item.Name}</label>
+         <h4>:االعمر</h4><label>item.id}</label>*/}
           
           
           
           </Card>
 
 </div>
-   ) })}
+
+  {/* ) })}*/}
  
  </div>
 

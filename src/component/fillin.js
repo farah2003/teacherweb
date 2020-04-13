@@ -4,9 +4,11 @@ import React, { Component } from 'react';
 import { Input , Checkbox,Button, Card } from 'antd';
 import './style/fill.css'
 import SNav from './secandNav'
-
+import darkTheme from '@ant-design/dark-theme'
 
 import * as firebase from 'firebase'
+import {Layout} from 'antd';
+const { Header } = Layout;
 const { TextArea } = Input;
 
 
@@ -182,17 +184,25 @@ db.collection("patients").add({
   
     return(
       
-      <div >
-        <SNav></SNav>
+      <div style={{backgroundColor:"#e6e6fa"}} >
+        <div style={{paddingBottom:20}}>
+      <Layout className="layout">
+        <Header style={{ backgroundColor: darkTheme , width:'100%',height:60}}  > 
+          
+         <h1 style={{color:'white'}}>Fill in</h1>
+        </Header>
+     
+        </Layout>
+      </div >
          
-          <div  className="body" >
+          <div style={{ width:200}}>
 
-    <Card className="card"   title={<h2 style={{marginTop:20,fontWeight:'bold',textAlign:'right' ,marginRight:30}}>استمارة</h2> }  style={{ width: 900,height:900 ,marginTop:90,marginLeft:220,marginBottom:50}}>
+    <Card className="card"   title={<h2 style={{marginTop:0,fontWeight:'bold',textAlign:'right' ,marginRight:30,color:'#002266'}}> استمارة المريض</h2> }  style={{textAlign:"right", width: 800,height:900 ,marginTop:40,marginLeft:230,marginBottom:10}}>
       
             
              
           
-               <p className="h1"> استمارة المريض  </p>
+              <div style={{marginRight:40}}>
 
              
               <h3 className="h3">  الإسم الكامل للمريض </h3>
@@ -240,12 +250,12 @@ db.collection("patients").add({
               </div>
               </div>
  
-              <Button style={{color:" #466995",width:200}} onClick={this.send}>
-             ارسال
+              <Button type="primary" style={{color:" #466995",width:230,marginTop:20}} onClick={this.send}>
+              <h2 style={{fontFamily:'AdventPro-Bold	', color:'white'}}>send</h2>
            </Button>
          
        
-                
+           </div>
        
         
               </Card>
