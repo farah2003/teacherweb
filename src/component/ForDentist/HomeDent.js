@@ -81,14 +81,14 @@ class DHome extends Component{
             style={{ lineHeight: '80px'}}
           >
         
-            <Menu.Item key="1"  style={{width:120}}><NavLink to='/ForDentist/allpage' style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>الكل</NavLink></Menu.Item>
+            <Menu.Item key="1"  style={{width:120}}><NavLink to='/ForDentist/allpage' style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>All</NavLink></Menu.Item>
     
-            <Menu.Item key="2"  style={{width:120}}><NavLink to='/ForDentist/page1'   style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>تلبيسة</NavLink></Menu.Item>
-            <Menu.Item key="3"  style={{width:120}}><NavLink to='/ForDentist/page2'  style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>علاج عصب</NavLink></Menu.Item>
-            <Menu.Item key="4"   style={{width:120}}><NavLink to='/ForDentist/page3'   style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>طقم اسنان  </NavLink></Menu.Item>
-            <Menu.Item key="5"style={{width:120}}><NavLink to='/ForDentist/page4' style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}> حشوالاضراس</NavLink></Menu.Item>
-            <Menu.Item key="6" style={{width:120}}><NavLink to='/ForDentist/page5'   style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}> خلع  </NavLink></Menu.Item>
-            <Menu.Item key="7"  style={{width:120}}><NavLink to='/ForDentist/page6'   style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}> تنظيف اسنان </NavLink></Menu.Item>
+            <Menu.Item key="2"  style={{width:120}}><NavLink to='/ForDentist/page1'   style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>Orthodontics</NavLink></Menu.Item>
+            <Menu.Item key="3"  style={{width:120}}><NavLink to='/ForDentist/page2'  style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}> nerve treatment</NavLink></Menu.Item>
+            <Menu.Item key="4"   style={{width:120}}><NavLink to='/ForDentist/page3'   style={{fontWeight:'bold',fontSize:'25',textAlign:'center'}}>Denture  </NavLink></Menu.Item>
+            <Menu.Item key="5"style={{width:120}}><NavLink to='/ForDentist/page4' style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}> Molar filling</NavLink></Menu.Item>
+            <Menu.Item key="6" style={{width:120}}><NavLink to='/ForDentist/page5'   style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}>tooth removal  </NavLink></Menu.Item>
+            <Menu.Item key="7"  style={{width:120}}><NavLink to='/ForDentist/page6'   style={{fontWeight:'bold',fontSize:'35',textAlign:'center'}}>   Cleaning teeth </NavLink></Menu.Item>
           </Menu>
           </div>
           </div>

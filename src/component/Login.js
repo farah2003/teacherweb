@@ -84,10 +84,10 @@ class Login extends Component{
           Or <a href='./sign'>create acount </a>
           </Card>
           </div>
-          <div  style={{float: 'right' ,width:600,height:620,marginTop:0 ,marginRight:100}} >
+          <div  style={{float: 'right' ,width:700,height:670,marginTop:0}} >
                      
- <img style={{backgroundColor:'red', width:'600',height:'100%',marginRight:100,opacity:'0,5' 
-  ,filter: 'alpha(opacity=50)'}}  src={require("../log.png")} onClick={this.pri} alt="img"/>
+ <img style={{backgroundColor:'red', width:'100%',height:'100%',opacity:'0,5' 
+  ,filter: 'alpha(opacity=50)'}}  src={require("../login.jpg")} onClick={this.pri} alt="img"/>
             
            </div>
              

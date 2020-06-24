@@ -19,7 +19,7 @@ class  Home extends Component{
 
     return(
       <div>
-        <Nav></Nav>
+        <Nav style={{position:'fixed'}}></Nav>
 
 
 
@@ -34,17 +34,14 @@ class  Home extends Component{
 
     </div>
     <div>
-    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}  alt='img2'/> 
+    <img src={require("../component/smile.jpg")} style={{width:'100%', height:500, marginTop:0}}  alt='img2'/> 
     </div>
 
     <div>
-    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}  alt='img3'/> 
+    <img src={require("../component/smile.jpg")} style={{width:'100%', height:500, marginTop:0}}  alt='img3'/> 
     </div>
 
-    <div>
-    <img src={require("../component/dental.jpg")} style={{width:'100%', height:500, marginTop:0}}  alt='img4'/> 
-    </div>
-
+   
   </Carousel>
   <div style={{ backgroundColor:'#ffffff', height:200}}>
     <div style={{marginLeft:340,paddingTop:30}}>

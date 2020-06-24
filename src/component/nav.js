@@ -17,7 +17,7 @@ class Nav extends Component{
   
       <div>
       <Layout className="layout">
-        <Header style={{ background: darkTheme , padding: 0, width:'100%',height:115}}>
+        <Header style={{ background: darkTheme , width:'100%',height:115}}>
           <div style={{float:'left',marginTop:20}}>
             <label className="Label" style={{marginLeft:120 ,marginTop:40,color:'white',fontFamily: 'Satisfy',fontSize:50}}>Dent Guide</label>
           </div>

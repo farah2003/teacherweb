@@ -24,28 +24,32 @@ class Profile extends Component{
     userid:""
 }
 
-  componentWillMount(){
+async componentWillMount(){
   const  user = firebase.auth().currentUser;
-   
+  let userid =user.uid 
+   await this .setState({
+    userid
+   })
+   console.log(userid)
    this.getuserCard()
     this.getUseInfo()
   
   }
-  getuserCard = ()=>{
+  getuserCard = async()=>{
 
     let s=[]
      const db = firebase.firestore();
 
    
-   const {list}=this.state
-    const  user = firebase.auth().currentUser;
- 
+  
+    let user =   await firebase.auth().currentUser
+  //  const id= await user.uid
 
    //  
    console.log('state',this.state.userid)
     let newList =[]
    
-    db.collection("patients").where('id','==',"").get().then((userSnapshot) => {
+    db.collection("patients").where('id','==',user.uid).get().then((userSnapshot) => {
 
         
       userSnapshot.docs.map(doc =>
@@ -62,12 +66,13 @@ class Profile extends Component{
     
 })
   }
-  getUseInfo= ()=>{
+  getUseInfo=async ()=>{
     const db = firebase.firestore();
     
-    const  user = firebase.auth().currentUser;
 
-    /*db.collection("Users").doc(user.uid).get().then((userdoc) =>{
+    let user =   await firebase.auth().currentUser
+  // const  id= await user.uid
+    db.collection("Users").doc(user.uid).get().then((userdoc) =>{
 
 
       var UserName=userdoc.data().UsersName
@@ -86,7 +91,7 @@ class Profile extends Component{
   
   
       })
-  */
+  
   }
   move1=()=>{
    
@@ -122,7 +127,7 @@ class Profile extends Component{
 </div>
 
 <div style={{float:"right",height:400,marginTop:150,marginLeft:30,width:400}}>
-<h2>farah shaqoura{this.state.UserName}</h2>
+<h2>{this.state.UserName}</h2>
 <h4>student level 5</h4>
 
   
@@ -149,7 +154,7 @@ class Profile extends Component{
 <Icon  type="user" style={{fontSize: '20px', color: '#4d4dff' }} />
 </div>
 <div style={{float:"left"}}>
-<h4>farah shaqoura{this.state.Name}</h4>
+<h4>{this.state.Name}</h4>
 </div>
 </div>
 <div style={{display:"flex"}}>
@@ -157,7 +162,7 @@ class Profile extends Component{
 <Icon type="mail" style={{ color: '#4d4dff',fontSize: '20px' }} />
 </div>
 <div style={{float:"left"}}>
-<h4> dfrg@gmail.com{this.state.Email}</h4>
+<h4> {this.state.Email}</h4>
 </div>
 </div>
 <div style={{display:"flex"}}>
@@ -165,7 +170,7 @@ class Profile extends Component{
 <Icon  type="phone" style={{ color: '#4d4dff',fontSize: '20px' }} />
 </div>
 <div style={{float:"left"}}>
-<h4>098678787{this.state.Phone}</h4>
+<h4>{this.state.Phone}</h4>
 <Button style={{color:"#4d4dff",width:200,backgroundColor: '#03a9f4',height:40, width: 200,borderRadius:30,marginRight:100,
     marginBottom:20}}><h4 style={{color:'white'}}>EDIT</h4></Button>
           
@@ -177,27 +182,29 @@ class Profile extends Component{
 </div>
 
 {/*card*/}
-{ /* { list.map((item,index)=>{
-/ return(*/}
-
 <div style={{float:"right"}}>
-  <h1 style={{marginLeft:90,marginBottom:30,marginTop:30}}> celected</h1>
-<Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>FCH XF</h4> }  style={{ width: 700,height:200 ,marginLeft:90,marginBottom:40, marginTop:10}}>
+<h1 style={{marginLeft:90,marginBottom:30,marginTop:30}}> selected</h1>
+ { list.map((item,index)=>{
+ return(
+
+<div>
+ 
+<Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>{item.Name}</h4> }  style={{ width: 700,height:200 ,marginLeft:90,marginBottom:40, marginTop:10}}>
 <div style={{textAlign:"right",display:"flex",height: 200}}>
              <div style={{float:"left",height: 200,marginLeft:50}}> 
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> Name</label>{item.Name}</h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> Phone Number</label>{item.Phone}</h3>
           
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> Email</label>{item.Email} </h3>
           
         
               </div> 
-              <div style={{float:"right",height: 200,marginLeft:160}}>
+              <div style={{float:"right",height: 200,marginLeft:180}}>
            
 
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}>Age</label>:{item.Age}</h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> treatment</label>: Orthodontics </h3>
+              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> Note</label>:{item.Notes} </h3>
               
 
     </div>
@@ -205,45 +212,16 @@ class Profile extends Component{
   
     </div> 
           
-         {/*<h4>:االعمر</h4><label>item.Name}</label>
-         <h4>:االعمر</h4><label>item.id}</label>*/}
-          
-          
-          
-          </Card>
-          <Card  title={<h4 style={{height:10,marginTop:3,fontWeight:'bold' ,marginRight:30}}>FCH XF</h4> }  style={{ width: 700,height:200 ,marginLeft:90,marginBottom:5, marginTop:10}}>
-<div style={{textAlign:"right",display:"flex",height: 200}}>
-             <div style={{float:"left",height: 200,marginLeft:50}}> 
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
-          
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> 22</label>:العمر </h3>
-          
-        
-              </div> 
-              <div style={{float:"right",height: 200,marginLeft:160}}>
-           
-
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
-              <h3 style={{fontSize:18}}> <label style={{fontSize:18,marginRight:7}}> sara.shaqouragmail.com</label>:Email </h3>
-              
-
-    </div>
-    
   
-    </div> 
-          
-         {/*<h4>:االعمر</h4><label>item.Name}</label>
-         <h4>:االعمر</h4><label>item.id}</label>*/}
-          
-          
           
           </Card>
+
 
 </div>
 
-  {/* ) })}*/}
+
+ ) })}
+ </div>
  
  </div>
 

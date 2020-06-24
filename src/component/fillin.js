@@ -68,46 +68,64 @@ class Fillin extends Component{
     })
   }
   checkA=(e)=>{
-    console.log(e.target.checked)
-    if (e.target.checked===true){
-    this.setState({
-      idA:'A'
-    })
+
+    
     this.setState({
       idA:''
-    }) 
-    }}
+    })
+    console.log(e.target.checked)
+    if (e.target.checked===true){
+      console.log('A')
+    this.setState({
+      idA:e.target.checked
+    })
+    }
+    else{
+      this.setState({
+        idA:''
+      }) 
+    }
+  }
     checkB=(e)=>{
       console.log(e.target.checked)
       if (e.target.checked===true){
       this.setState({
-        idB:'B'
+        idB:e.target.checked
       })
+      }
+    else{
       this.setState({
         idB:''
       }) 
-      }}
+   
+    }}
      
       checkC=(e)=>{
         console.log(e.target.checked)
         if (e.target.checked===true){
         this.setState({
-          idC:'C'
+          idC:e.target.checked
         })
+        
+        }
+      else{
         this.setState({
           idC:''
-        }) 
-        }}
+        })
+      }}
    
         checkD=(e)=>{
           console.log(e.target.checked)
           if (e.target.checked===true){
           this.setState({
-            idD:'D'
+            idD:e.target.checked
           })
-          this.setState({
-            idD:''
-          }) 
+         
+          }
+          else{
+            this.setState({
+              idD:''
+            }) 
           }
         }
 
@@ -115,17 +133,20 @@ class Fillin extends Component{
      console.log(e.target.checked)
     if (e.target.checked===true){
        this.setState({
-       idF:'F'
+       idF:e.target.checked
               })
-   this.setState({
-       idF:''
-        }) 
-      }}
+ 
+      }
+    else{
+      this.setState({
+        idF:''
+         })
+    }}
       checkE=(e)=>{
      console.log(e.target.checked)
      if (e.target.checked===true){
        this.setState({
-       idF:'E'
+       idF:e.target.checked
        })
        this.setState({
        idF:''
@@ -134,6 +155,7 @@ class Fillin extends Component{
 
 
   send=()=>{
+    console.log('bbb',this.state.idB)
     var name=this.state.name;
     var phone=this.state.phone;
     var age=this.state.age;
@@ -171,10 +193,7 @@ db.collection("patients").add({
         })
         .catch(function (error) {
             console.error("Error adding document: ", error);
-        }).then(
-      this.props.history.push('./ForDentist/HomeDent')
-    )
-
+        })
    
   
   }
@@ -197,7 +216,7 @@ db.collection("patients").add({
          
           <div style={{ width:200}}>
 
-    <Card className="card"   title={<h2 style={{marginTop:0,fontWeight:'bold',textAlign:'right' ,marginRight:30,color:'#002266'}}> استمارة المريض</h2> }  style={{textAlign:"right", width: 800,height:900 ,marginTop:40,marginLeft:230,marginBottom:10}}>
+    <Card className="card"   title={<h2 style={{marginTop:0,fontWeight:'bold',textAlign:"left" ,marginRight:30,color:'#002266'}}> Form</h2> }  style={{textAlign:"left", width: 800,height:900 ,marginTop:40,marginLeft:230,marginBottom:10}}>
       
             
              
@@ -205,47 +224,47 @@ db.collection("patients").add({
               <div style={{marginRight:40}}>
 
              
-              <h3 className="h3">  الإسم الكامل للمريض </h3>
+              <h3 className="h3"> Patient Name </h3>
               <Input  onChange={this.addName} style={{width:500}} />
-              <h3  className="h3" >  رقم هاتف المريض </h3>
+              <h3  className="h3" > Phone number </h3>
               <Input onChange={this.addPhone} style={{width:500}}/>
-              <h3  className="h3">  العمر </h3>
+              <h3  className="h3"> Age </h3>
               <Input  onChange={this.addAge} style={{width:500}}/>
               <h3  className="h3"> Email addresss </h3>
               <Input  onChange={this.addEmail} style={{width:500}} />
              
 
-              <h3  className="h3"> ملاحظات إضافية  </h3>
+              <h3  className="h3"> Another Note </h3>
               <TextArea rows={4} onChange={this.addNotes} style={{width:500}}/>
               
-              <h3  className="h3">  أمراض مزمنة أو أمراض أخرى </h3>
+              <h3  className="h3"> Chronic diseases and others </h3>
               <TextArea rows={4} onChange={this.addDisease} style={{width:500}}/>
 
-              <h3  className="h3"> العلاج التي تحتاجه  </h3>
-            <div style={{alignItems:'flex-end'}}> 
+              <h3  className="h3">The treatment you need </h3>
+            <div style={{alignItems:'flex_start'}}> 
         <div>
-             تلبيسة   <Checkbox onChange={this.checkA}/>
+             <Checkbox onChange={this.checkA}/> Orthodontics
 
               </div>
 
               <div>
-             علاج عصب <Checkbox onChange={this.checkB}/> 
+           <Checkbox onChange={this.checkB}/>   nerve treatment
               </div>
               <div>
-              طقم اسنان <Checkbox onChange={this.checkC}/>
+            <Checkbox onChange={this.checkC}/>  Denture
             
               </div>
               <div>
-              حشو اضراس <Checkbox onChange={this.checkD}/>
+            <Checkbox onChange={this.checkD}/>  Molar filling
             
           
               </div>
               <div>
-              خلع <Checkbox onChange={this.checkE}/>
+             <Checkbox onChange={this.checkE}/>  tooth removal
             
               </div>
               <div>
-            تنظيف اسنان <Checkbox onChange={this.checkF}/>
+       <Checkbox onChange={this.checkF}/>        Cleaning teeth
             
               </div>
               </div>
