@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Input, Button,Card,Icon } from 'antd';
+import { Button,Card,Icon } from 'antd';
 import './HomeDent'
-import darkTheme from '@ant-design/dark-theme'
+
 import * as firebase from 'firebase'
 
 import './stylefordent/main.css'
 
 import './page2'
 
-const { Meta } = Card;
+
 
 
 class Profile extends Component{
@@ -27,7 +27,7 @@ class Profile extends Component{
 async componentWillMount(){
   const  user = firebase.auth().currentUser;
   let userid =user.uid 
-   await this .setState({
+   await this.setState({
     userid
    })
    console.log(userid)
@@ -37,7 +37,7 @@ async componentWillMount(){
   }
   getuserCard = async()=>{
 
-    let s=[]
+ 
      const db = firebase.firestore();
 
    
@@ -52,12 +52,12 @@ async componentWillMount(){
     db.collection("patients").where('id','==',user.uid).get().then((userSnapshot) => {
 
         
-      userSnapshot.docs.map(doc =>
-        {
+      userSnapshot.docs.map((doc) => {
+        
           console.log( 'cardfor user ', doc.data())
       let x= doc.data()
   
-          
+         console.log(x) 
       newList.push(x)    
       } );  
     this.setState({

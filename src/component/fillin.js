@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { Input , Checkbox,Button, Card } from 'antd';
 import './style/fill.css'
-import SNav from './secandNav'
+
 import darkTheme from '@ant-design/dark-theme'
 
 import * as firebase from 'firebase'
