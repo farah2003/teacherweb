@@ -20,7 +20,7 @@ import  SPage from './component/ForDentist/page6'
 import PCard from './component/ForDentist/allpage'
 
 import DHome from './component/ForDentist/HomeDent'
-
+import SHome from './component/student/Home'
 
 
 class App extends Component{
@@ -53,7 +53,7 @@ pri=()=>{
     <Route path='/ForDentist/page5' component={FIFPage}></Route>
     <Route path='/ForDentist/page6' component={SPage}></Route>
     <Route path='/ForDentist/allpage' component={PCard}></Route>
-
+    <Route path='/student/Home' component={SHome}></Route>
     <Route path='/ForDentist/HomeDent' component={DHome}></Route>
 
     </Switch>
