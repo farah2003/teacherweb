@@ -78,6 +78,7 @@ onSearch3=(val)=> {
 
   }
   filter=()=>{
+    console.log('fff')
       const {sub}=this.state
       const {grade}=this.state
       const {location}=this.state
