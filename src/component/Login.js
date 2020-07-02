@@ -44,7 +44,8 @@ class Login extends Component{
 
      )}
      signup=()=>{
-       console.log('fdfdjs')
+       console.log('fdfdjsfff')
+       console.log('fdfdjsfff')
       this.props.history.push('./sign')
      }
  
